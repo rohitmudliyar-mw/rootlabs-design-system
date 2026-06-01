@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AshwaMag — Design System
 
-## Getting Started
+A clean, mobile-first design system for the AshwaMag brand (doctor-led sleep
+science). Built so you can keep adding and modifying components yourself.
 
-First, run the development server:
+> **Brand:** _Rested, not sedated._ Clinical green is the lead color, berry is
+> the product accent. Full brand rules live in `docs/ashwamag-brand-guide.html`.
+
+## The stack (and why)
+
+| Tool | What it is | Why |
+| --- | --- | --- |
+| **Next.js** | The framework (pages, routing) | Your recommended stack; deploys to Vercel in one click |
+| **Tailwind CSS** | Styling via utility classes | Fast, consistent, no separate CSS files to manage |
+| **shadcn/ui** | Component source you _own_ | Components are copied into your code — open any layer and edit it, like an unlocked Figma library |
+
+## Run it
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open the URL it prints (usually http://localhost:3000). Three pages:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **`/`** — the landing page (all marketing sections assembled)
+- **`/product`** — the product detail page (PDP)
+- **`/system`** — the component showcase (every building block in one scroll) ← **start here**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How it's organized
 
-## Learn More
+Think of it in three layers, smallest to largest:
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├─ app/                      ← the actual pages
+│  ├─ page.tsx               landing page
+│  ├─ product/page.tsx       product detail page
+│  ├─ system/page.tsx        component showcase
+│  ├─ layout.tsx             fonts (Fraunces + Inter) + global setup
+│  └─ globals.css            ⭐ ALL brand tokens live here (colors, radius)
+│
+├─ components/
+│  ├─ ui/                    shadcn primitives you own (button, accordion…)
+│  ├─ brand/                 ← brand atoms (Card, Pill, Stars, Logo, type…)
+│  ├─ sections/              landing-page sections (Hero, Reviews, FAQ…)
+│  └─ pdp/                   product-page sections (BuyBox, Gallery…)
+│
+└─ lib/
+   └─ content.ts             ⭐ ALL copy & product data (edit text here)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Two files you'll touch most:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **`src/app/globals.css`** — change a brand color in one place and it updates
+   everywhere. (This is your "brand layer" — reskin here later.)
+2. **`src/lib/content.ts`** — change headlines, prices, reviews, FAQ, ingredients.
 
-## Deploy on Vercel
+## Brand colors (use as Tailwind classes)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`bg-bone` `bg-surface` `text-ink` `text-ink-2` `text-ink-3` `bg-green`
+`text-green` `bg-green-mist` `bg-green-hl` `text-berry` `border-hair`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Add another shadcn component later
+
+```bash
+npx shadcn@latest add tooltip   # e.g. add a tooltip; it lands in src/components/ui/
+```
+
+## Deploy (when ready)
+
+Push to GitHub, then import the repo on [vercel.com](https://vercel.com). Free.

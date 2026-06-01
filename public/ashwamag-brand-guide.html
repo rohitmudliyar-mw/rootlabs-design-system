@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AshwaMag — Brand Guide · v1.0</title>
+<meta name="description" content="The single source of truth for the AshwaMag brand by Root Labs. Strategy, voice, identity, and the rules that keep every page honest." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet" />
+<style>
+  /* ============================================================
+     ASHWAMAG — BRAND GUIDE
+     Design system tokens
+     Lead color: clinical green. Berry = product accent.
+     ============================================================ */
+  :root {
+    /* Canvas + surfaces (cool, clinical off-white) */
+    --bone:        #F1F3EE;   /* cool off-white canvas */
+    --bone-2:      #E8ECE4;   /* recessed sections */
+    --surface:     #FFFFFF;   /* cards */
+    --ink:         #181C19;   /* primary text (cool charcoal) */
+    --ink-2:       #4E564D;   /* secondary text / body */
+    --ink-3:       #828A7D;   /* muted labels, eyebrows */
+
+    /* Accent — Clinical Green (the lead) */
+    --green:       #33513F;   /* deep clinical green: CTAs, marks, numerals */
+    --green-deep:  #243B2D;   /* hover / dark green */
+    --green-mist:  #E9EFE6;   /* soft tint backgrounds */
+    --green-hl:    #CDE3B0;   /* the highlighter — one word at a time */
+
+    /* Accent — Berry (the product) */
+    --berry:       #7C2D43;   /* used sparingly: the gummy, the science, "Mag" */
+    --berry-mist:  #F4E6E3;   /* rare product tint */
+
+    /* Lines + states */
+    --hair:        #E1E5DB;   /* hairlines, borders, dividers */
+    --hair-soft:   #EAEEE3;
+    --warn:        #B0746C;   /* muted clay for "never" pills (semantic, not brand) */
+
+    /* Type */
+    --serif: "Fraunces", Georgia, "Times New Roman", serif;
+    --sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+
+    --maxw: 880px;
+    --gutter: clamp(20px, 5vw, 48px);
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bone);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.65;
+    font-weight: 450;
+    letter-spacing: 0.002em;
+  }
+  @media (max-width: 600px) { body { font-size: 16px; } }
+
+  /* ---------- Typographic primitives ---------- */
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 22px;
+  }
+  .eyebrow.green { color: var(--green); }
+
+  h1, h2, h3 { font-family: var(--serif); font-weight: 400; color: var(--ink); margin: 0; }
+
+  .display {
+    font-family: var(--serif);
+    font-weight: 380;
+    font-size: clamp(44px, 9vw, 92px);
+    line-height: 0.98;
+    letter-spacing: -0.015em;
+  }
+  .display em { font-style: italic; font-weight: 360; }
+
+  .section-title {
+    font-size: clamp(30px, 5.4vw, 48px);
+    line-height: 1.04;
+    letter-spacing: -0.01em;
+    margin: 0 0 22px;
+  }
+  .lede {
+    font-size: clamp(17px, 2.4vw, 20px);
+    line-height: 1.6;
+    color: var(--ink-2);
+    max-width: 56ch;
+    margin: 0;
+  }
+
+  .card-title { font-family: var(--sans); font-weight: 600; font-size: 17px; letter-spacing: 0.005em; color: var(--ink); }
+  .label {
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  /* The highlighter — used on exactly one phrase at a time */
+  .hl {
+    background: linear-gradient(180deg, transparent 58%, var(--green-hl) 58%, var(--green-hl) 94%, transparent 94%);
+    padding: 0 0.06em;
+  }
+
+  /* ---------- Layout ---------- */
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
+
+  section.block { padding: clamp(72px, 12vh, 132px) 0; border-top: 1px solid var(--hair); }
+  section.block:first-of-type { border-top: none; }
+
+  .sec-no {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: var(--green);
+    text-transform: uppercase;
+    margin: 0 0 20px;
+  }
+
+  /* ---------- Cards & grids ---------- */
+  .grid { display: grid; gap: 16px; }
+  .g2 { grid-template-columns: 1fr 1fr; }
+  .g3 { grid-template-columns: repeat(3, 1fr); }
+  .g4 { grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 720px) { .g2, .g3, .g4 { grid-template-columns: 1fr; } }
+  @media (max-width: 720px) { .g4.keep, .g3.keep { grid-template-columns: 1fr 1fr; } }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--hair);
+    border-radius: 18px;
+    padding: 28px;
+  }
+  .card p { margin: 8px 0 0; color: var(--ink-2); font-size: 15.5px; line-height: 1.55; }
+  .card .label { margin-bottom: 14px; display: block; }
+
+  .callout {
+    background: var(--green-mist);
+    border: 1px solid #D7E2CD;
+    border-radius: 18px;
+    padding: clamp(28px, 4vw, 40px);
+  }
+  .callout .label { color: var(--green); }
+  .callout .quote {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 360;
+    font-size: clamp(21px, 3.4vw, 30px);
+    line-height: 1.28;
+    color: var(--ink);
+    margin: 16px 0 0;
+    letter-spacing: -0.005em;
+  }
+
+  .callout.dark { background: var(--ink); border-color: var(--ink); }
+  .callout.dark .label { color: var(--green-hl); }
+  .callout.dark p, .callout.dark .quote { color: #EEF1EA; }
+  .callout.dark strong { color: #fff; }
+
+  /* Voice / anti-voice frames */
+  .frame { border-radius: 18px; padding: 28px; border: 1px solid var(--hair); background: var(--surface); }
+  .frame.yes { border-color: var(--green); background: var(--green-mist); }
+  .frame.no  { border-color: #DCE0D5; background: #F4F6F1; }
+  .frame ul { margin: 14px 0 0; padding: 0; list-style: none; }
+  .frame li { padding: 7px 0; font-size: 15.5px; color: var(--ink-2); border-bottom: 1px solid rgba(0,0,0,0.05); }
+  .frame li:last-child { border-bottom: none; }
+  .frame li::before { content: ""; display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--ink-3); margin-right: 12px; vertical-align: middle; }
+  .frame.yes li::before { background: var(--green); }
+  .frame.no  li::before { background: var(--warn); }
+
+  .pill {
+    display: inline-block;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase;
+    padding: 6px 12px; border-radius: 999px; margin-bottom: 6px;
+  }
+  .pill.yes { background: var(--green); color: #fff; }
+  .pill.no  { background: #fff; color: var(--warn); border: 1px solid #DCC7C3; }
+  .pill.green { background: var(--green); color:#fff; }
+
+  /* Pillars */
+  .pillar .num { font-family: var(--serif); font-size: 38px; color: var(--green); line-height: 1; }
+  .pillar .card-title { margin-top: 14px; display: block; }
+
+  /* Two-col rows (feel / never feel, tone by context) */
+  .rows { border-top: 1px solid var(--hair); margin-top: 8px; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 16px 0; border-bottom: 1px solid var(--hair); }
+  .row .a { color: var(--ink); font-weight: 500; font-size: 15.5px; }
+  .row .b { color: var(--ink-3); font-size: 15.5px; }
+  @media (max-width: 600px) { .row { grid-template-columns: 1fr; gap: 4px; } }
+
+  .colhead { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 26px; }
+  @media (max-width: 600px) { .colhead { display: none; } }
+
+  /* Logo lockups */
+  .lockup {
+    display: flex; align-items: center; gap: 16px;
+    padding: 40px 28px; border-radius: 16px; border: 1px solid var(--hair); background: var(--surface);
+  }
+  .lockup.dark { background: var(--ink); border-color: var(--ink); }
+  .lockup .mark {
+    width: 38px; height: 38px; border-radius: 9px; flex: none;
+    display: grid; place-items: center; font-family: var(--serif); font-size: 22px; font-weight: 500;
+    background: var(--green); color: #fff;
+  }
+  .lockup .wordmark { font-family: var(--serif); font-size: 26px; font-weight: 460; letter-spacing: -0.01em; color: var(--ink); }
+  .lockup .wordmark span { color: var(--berry); }
+  .lockup.dark .wordmark { color: #fff; }
+  .lockup.dark .wordmark span { color: #fff; }
+  .lockup .sub { font-family: var(--sans); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-3); display:block; margin-top: 4px; }
+  .lockup.dark .sub { color: #AEB6A8; }
+  .lockup-meta { margin-top: 12px; }
+  .lockup-meta .label { display:block; }
+  .lockup-meta small { color: var(--ink-3); font-size: 12px; letter-spacing: 0.04em; }
+
+  /* Swatches */
+  .sw { border: 1px solid var(--hair); border-radius: 14px; overflow: hidden; background: var(--surface); }
+  .sw .chip { height: 92px; }
+  .sw .meta { padding: 14px 16px 16px; }
+  .sw .meta .name { font-weight: 600; font-size: 14.5px; }
+  .sw .meta .hex { font-size: 12.5px; color: var(--ink-3); letter-spacing: 0.04em; margin-top: 2px; }
+  .sw .meta .use { font-size: 12.5px; color: var(--ink-2); margin-top: 8px; line-height: 1.45; }
+
+  /* Type spec rows */
+  .typespec { border-radius: 16px; border: 1px solid var(--hair); background: var(--surface); padding: 26px 28px; }
+  .typespec .head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 14px; }
+  .typespec .head .label { margin: 0; }
+  .typespec .specimen-serif { font-family: var(--serif); font-size: clamp(30px, 5vw, 44px); line-height: 1.05; font-weight: 380; letter-spacing: -0.01em; }
+  .typespec .specimen-serif em { font-style: italic; }
+  .typespec .specimen-sans { font-family: var(--sans); font-size: clamp(20px, 3vw, 26px); font-weight: 500; letter-spacing: -0.005em; line-height: 1.2; }
+  .typespec p { color: var(--ink-2); font-size: 15px; margin: 10px 0 0; }
+
+  table.scale { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  table.scale th { text-align: left; font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; padding: 14px 8px; border-bottom: 1px solid var(--hair); }
+  table.scale td { padding: 15px 8px; border-bottom: 1px solid var(--hair-soft); font-size: 14.5px; color: var(--ink-2); }
+  table.scale td:first-child { color: var(--ink); font-weight: 500; }
+  table.scale tr:last-child td { border-bottom: none; }
+
+  /* Ingredient / science */
+  .step { display: grid; grid-template-columns: 34px 1fr; gap: 16px; align-items: start; padding: 18px 0; border-bottom: 1px solid var(--hair); }
+  .step:last-child { border-bottom: none; }
+  .step .n { font-family: var(--serif); color: var(--green); font-size: 20px; line-height: 1.2; }
+  .step .t { font-weight: 600; font-size: 15.5px; }
+  .step .d { color: var(--ink-2); font-size: 15px; margin-top: 3px; }
+
+  .cite { font-size: 13px; color: var(--ink-3); }
+  .cite b { color: var(--berry); font-weight: 600; }
+
+  /* CTA demo */
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--green); color: #fff; text-decoration: none;
+    font-weight: 600; font-size: 15px; letter-spacing: 0.01em;
+    padding: 15px 26px; border-radius: 999px; border: none;
+  }
+  .btn .arrow { width: 16px; height: 16px; }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+
+  /* TOC */
+  .toc-item { display: grid; grid-template-columns: 40px 1fr auto; gap: 16px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--hair); text-decoration: none; }
+  .toc-item:hover .toc-name { color: var(--green); }
+  .toc-item .toc-no { color: var(--green); font-weight: 600; font-size: 13px; letter-spacing: 0.08em; }
+  .toc-item .toc-name { color: var(--ink); font-weight: 500; font-size: 17px; transition: color .2s ease; }
+  .toc-item .toc-meta { color: var(--ink-3); font-size: 13px; text-align: right; }
+  @media (max-width: 600px) { .toc-item .toc-meta { display: none; } }
+
+  /* Header / footer */
+  header.site {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: saturate(140%) blur(10px);
+    background: rgba(241,243,238,0.82);
+    border-bottom: 1px solid var(--hair);
+  }
+  header.site .bar { display: flex; align-items: center; justify-content: space-between; padding: 14px var(--gutter); }
+  header.site .brand { font-family: var(--serif); font-size: 19px; font-weight: 480; letter-spacing: -0.01em; color: var(--ink); }
+  header.site .brand span { color: var(--berry); }
+  header.site .v { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
+
+  footer.site { border-top: 1px solid var(--hair); padding: 56px 0 80px; }
+  footer.site .fnote { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3); text-align: center; }
+
+  /* Cover */
+  .cover { padding: clamp(60px, 14vh, 150px) 0 clamp(56px, 10vh, 110px); }
+  .cover .meta-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: clamp(48px, 9vh, 96px); padding-top: 28px; border-top: 1px solid var(--hair); }
+  .cover .meta-strip .label { display: block; margin-bottom: 6px; }
+  .cover .meta-strip .val { font-size: 15px; color: var(--ink); font-weight: 500; }
+  @media (max-width: 600px) { .cover .meta-strip { grid-template-columns: 1fr; gap: 18px; } }
+
+  .stack-sm > * + * { margin-top: 16px; }
+  .mt-s { margin-top: 14px; } .mt-m { margin-top: 26px; } .mt-l { margin-top: 40px; }
+  .note { font-size: 13.5px; color: var(--ink-3); margin-top: 18px; }
+  .note code { background: var(--bone-2); padding: 2px 7px; border-radius: 6px; font-size: 12.5px; color: var(--ink-2); }
+
+  /* Reveal */
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+
+  /* ---------- Print / PDF ---------- */
+  @media print {
+    @page { size: A4; margin: 16mm 14mm; }
+    html, body { background: #fff !important; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    header.site { position: static; backdrop-filter: none; background: #fff; }
+    .reveal { opacity: 1 !important; transform: none !important; }
+    section.block { padding: 36px 0; border-top: 1px solid var(--hair); break-inside: auto; }
+    .cover { padding: 24px 0 40px; }
+    /* keep groups intact across page breaks */
+    .card, .frame, .callout, .typespec, .sw, .lockup, .toc-item, .step, .row { break-inside: avoid; }
+    .section-title, h1, h2 { break-after: avoid; }
+    .grid { gap: 12px; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site">
+  <div class="bar">
+    <div class="brand">Ashwa<span>Mag</span></div>
+    <div class="v">Brand Guide · v1.0</div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ COVER ============ -->
+<section class="cover">
+  <div class="wrap reveal">
+    <p class="eyebrow">The Brand Guide · Root Labs</p>
+    <h1 class="display">Rested.<br /><em>Not <span class="hl">sedated</span>.</em></h1>
+    <p class="lede mt-l">The single source of truth for AshwaMag. Strategy, voice, identity, and the rules that keep every page clinical, honest, and calm. If your work carries this name, start here.</p>
+
+    <div class="meta-strip">
+      <div><span class="label">Document</span><span class="val">Brand Guide</span></div>
+      <div><span class="label">Product</span><span class="val">Liposomal Magnesium Glycinate + Ashwagandha gummies</span></div>
+      <div><span class="label">Audience</span><span class="val">Women 35+ who read labels</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW TO READ / TOC ============ -->
+<section class="block">
+  <div class="wrap reveal">
+    <p class="eyebrow">How to read this</p>
+    <h2 class="section-title">Strategy first. Rules second.</h2>
+    <p class="lede">The first two sections are the brain of the brand. Read them even if you read nothing else. The rest are the rules that protect that thinking in the wild.</p>
+
+    <div class="mt-l">
+      <a class="toc-item" href="#strategy"><span class="toc-no">01</span><span class="toc-name">Strategy</span><span class="toc-meta">Mission, archetype, the one idea</span></a>
+      <a class="toc-item" href="#verbal"><span class="toc-no">02</span><span class="toc-name">Verbal Identity</span><span class="toc-meta">Voice, pillars, writing rules</span></a>
+      <a class="toc-item" href="#logo"><span class="toc-no">03</span><span class="toc-name">Logo System</span><span class="toc-meta">Marks, placement, misuse</span></a>
+      <a class="toc-item" href="#color"><span class="toc-no">04</span><span class="toc-name">Color &amp; Typography</span><span class="toc-meta">Palette and type</span></a>
+      <a class="toc-item" href="#science"><span class="toc-no">05</span><span class="toc-name">The Science</span><span class="toc-meta">Mechanism, dose, evidence</span></a>
+      <a class="toc-item" href="#imagery"><span class="toc-no">06</span><span class="toc-name">Imagery Direction</span><span class="toc-meta">Real, clinical, calm</span></a>
+      <a class="toc-item" href="#motion"><span class="toc-no">07</span><span class="toc-name">Motion</span><span class="toc-meta">Calm, purposeful</span></a>
+      <a class="toc-item" href="#digital"><span class="toc-no">08</span><span class="toc-name">Digital / UI</span><span class="toc-meta">Components, CTAs</span></a>
+      <a class="toc-item" href="#access"><span class="toc-no">09</span><span class="toc-name">Accessibility</span><span class="toc-meta">Contrast, motion, alt text</span></a>
+      <a class="toc-item" href="#claims"><span class="toc-no">10</span><span class="toc-name">Claims &amp; Evidence Integrity</span><span class="toc-meta">What we can say, and prove</span></a>
+    </div>
+
+    <div class="callout mt-l">
+      <p class="label">The rule of last resort</p>
+      <p style="color:var(--ink); font-size:16px; margin-top:10px;">When a decision is not covered in this book, choose the option that is more honest and less salesy. Restoration over sedation. Evidence over hype. That is always the AshwaMag answer.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 01 STRATEGY ============ -->
+<section class="block" id="strategy">
+  <div class="wrap reveal">
+    <p class="sec-no">01 — Strategy</p>
+    <h2 class="section-title">The brain of the brand.</h2>
+    <p class="lede">Everything visual and verbal exists to express what is on this page. A few ideas that anchor every decision after.</p>
+
+    <div class="grid g2 mt-l">
+      <div class="card">
+        <span class="label">Mission</span>
+        <p>Help women 35+ <strong style="color:var(--ink)">get deep, continuous sleep by fixing the chemistry behind 3&nbsp;a.m. wakeups</strong>, not by sedating them. Most sleep aids get you down. We restore the deep sleep stress takes away.</p>
+      </div>
+      <div class="card">
+        <span class="label">Archetype — The Sage, with a Caregiver heart</span>
+        <p>A trusted clinician who has read every study but will not lecture you. We share the truth plainly, and we make it feel <strong style="color:var(--ink)">supportive, never cold</strong>. Knowledgeable, calm, on your side.</p>
+      </div>
+    </div>
+
+    <div class="card mt-s">
+      <span class="label">Positioning statement</span>
+      <p>In a sleep category built on melatonin, sedatives, and "knock-out" marketing, AshwaMag stands for <strong style="color:var(--ink)">the best-absorbed combination of magnesium</strong>, built for deep sleep. Magnesium oxide and melatonin can get you to sleep. They do not restore the deep sleep that stress takes away. We do, with a liposomal lipid layer, magnesium glycinate, KSM-66 and L-theanine, no sugar, and third-party testing across 7 certifications.</p>
+    </div>
+
+    <div class="callout mt-s">
+      <p class="label">Core narrative · the one idea to protect</p>
+      <p class="quote">Most magnesium barely absorbs. Most sleep aids just sedate. AshwaMag is the best-absorbed combination of magnesium, built for one thing: <span class="hl">deep sleep</span>. We restore it. We never sedate.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 01 STRATEGY CONTINUED ============ -->
+<section class="block">
+  <div class="wrap reveal">
+    <p class="sec-no">01 — Strategy · continued</p>
+    <h2 class="section-title">Why we are different.</h2>
+    <p class="lede">The promise is the whole mechanism, not a single sedating pill. We compete on how the body absorbs and uses what is inside.</p>
+
+    <p class="label mt-l" style="margin-bottom:16px;">The offering — four reasons to believe</p>
+    <div class="grid g4 keep">
+      <div class="card">
+        <span class="card-title">Best-absorbed magnesium</span>
+        <p>A liposomal lipid layer carries magnesium glycinate past stomach acid for <strong style="color:var(--ink)">~17% better absorption</strong>. Oxide passes through you. This does not.</p>
+      </div>
+      <div class="card">
+        <span class="card-title">Built for deep sleep</span>
+        <p>675&nbsp;mg magnesium glycinate, 200&nbsp;mg KSM-66 ashwagandha, 26&nbsp;mg L-theanine. Dosed to restore deep sleep, not just knock you out.</p>
+      </div>
+      <div class="card">
+        <span class="card-title">No sugar</span>
+        <p>Gummies usually hide sugar. Ours is sweetened with chicory root fibre, which also adds 8.76&nbsp;g of fibre, about 25% of your daily need.</p>
+      </div>
+      <div class="card">
+        <span class="card-title">7&times; certified</span>
+        <p>Backed by 7 certifications and batch-by-batch Eurofins testing, with a certificate of authentication on every lot.</p>
+      </div>
+    </div>
+
+    <p class="mt-m" style="color:var(--ink-2); font-size:16px;">We are <strong style="color:var(--ink)">not</strong> a melatonin gummy. We are <strong style="color:var(--ink)">not</strong> cheap magnesium oxide that passes through you. We are <strong style="color:var(--ink)">not</strong> a sugar gummy in disguise.</p>
+
+    <div class="grid g2 mt-m">
+      <div class="card">
+        <span class="label">The audience, in one line</span>
+        <p>Women 35+ who read labels: waking at 3&nbsp;a.m., wired but tired, and done with sleep aids that sedate instead of restore.</p>
+      </div>
+      <div class="card">
+        <span class="label">Why now</span>
+        <p>Magnesium literacy is rising and the melatonin backlash is real. The buyer has moved from "what knocks me out?" to "what actually gives me deep sleep?" and she reads the label before she buys.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 VERBAL IDENTITY ============ -->
+<section class="block" id="verbal">
+  <div class="wrap reveal">
+    <p class="sec-no">02 — Verbal Identity</p>
+    <h2 class="section-title">Calm. Credible. Honest.</h2>
+    <p class="lede">We sound like a smart sleep doctor who has read every paper but will not lecture you. Voice is constant. Tone flexes by context.</p>
+
+    <div class="grid g2 mt-l">
+      <div class="frame yes">
+        <span class="pill yes">Voice — always</span>
+        <ul>
+          <li>Credible</li>
+          <li>Calm</li>
+          <li>Evidence-forward</li>
+          <li>Honest</li>
+          <li>Supportive</li>
+        </ul>
+      </div>
+      <div class="frame no">
+        <span class="pill no">Anti-voice — never</span>
+        <ul>
+          <li>Hype-driven</li>
+          <li>Fear-mongering</li>
+          <li>"Knock-out" / sedative language</li>
+          <li>Overclaiming or miracle talk</li>
+          <li>Condescending</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="label mt-l" style="margin-bottom:16px;">Messaging pillars — every message ladders up to one</p>
+    <div class="grid g4 keep">
+      <div class="card pillar"><span class="num">1</span><span class="card-title">Deep sleep, not just sleep</span><p>Oxide and melatonin get you down. We restore the deep sleep stress takes away.</p></div>
+      <div class="card pillar"><span class="num">2</span><span class="card-title">The best-absorbed magnesium</span><p>A liposomal lipid layer and magnesium glycinate, roughly 17% better absorbed.</p></div>
+      <div class="card pillar"><span class="num">3</span><span class="card-title">No sugar, ever</span><p>Sweetened with chicory root fibre, not sugar. A rare thing in a gummy.</p></div>
+      <div class="card pillar"><span class="num">4</span><span class="card-title">Dosed and 7&times; certified</span><p>Clinical amounts, KSM-66, third-party tested across 7 certifications.</p></div>
+    </div>
+
+    <div class="callout mt-l">
+      <p class="label">The lead hook</p>
+      <p style="color:var(--ink); font-size:16px; margin-top:10px;"><strong style="color:var(--ink)">#1 on TikTok. #1 doctor-recommended.</strong> The social-proof hook that opens cold traffic. Always paired with the source and date that back it. See Claims &amp; Evidence Integrity.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 VERBAL CONTINUED ============ -->
+<section class="block">
+  <div class="wrap reveal">
+    <p class="sec-no">02 — Verbal Identity · continued</p>
+    <h2 class="section-title">How we sound in practice.</h2>
+    <p class="lede">The voice becomes real in the feelings we create, the rules we write by, and how tone shifts with context.</p>
+
+    <p class="label mt-l">How we make people feel</p>
+    <div class="colhead">
+      <span class="label">Make them feel</span>
+      <span class="label">Never make them feel</span>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="a">"Finally, an explanation that makes sense."</div><div class="b">Blamed for sleeping badly.</div></div>
+      <div class="row"><div class="a">"This is a real, science-led fix."</div><div class="b">Scared into a purchase.</div></div>
+      <div class="row"><div class="a">"I'm not broken. My chemistry is depleted."</div><div class="b">Promised a miracle.</div></div>
+      <div class="row"><div class="a">"I can sleep without a hangover."</div><div class="b">Talked down to.</div></div>
+    </div>
+
+    <div class="grid g2 mt-l">
+      <div class="card">
+        <span class="label">Writing rules</span>
+        <ul style="margin:8px 0 0; padding-left:18px; color:var(--ink-2); font-size:15.5px; line-height:1.7;">
+          <li>Lead with the mechanism, then the benefit.</li>
+          <li>Cite the dose and the study. Specific numbers over adjectives.</li>
+          <li>Be honest about the curve. Meaningful shifts land between days 18 and 28.</li>
+          <li>Never say "knock you out", "miracle", or "cure".</li>
+          <li>Short sentences. One idea each.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="label">Tone by context</span>
+        <table class="scale" style="margin-top:4px;">
+          <tr><td>Problem-aware ad</td><td>Validating, explanatory</td></tr>
+          <tr><td>Solution-aware ad</td><td>Educational, mechanism-led</td></tr>
+          <tr><td>Most-aware ad</td><td>Direct, short, offer-led</td></tr>
+          <tr><td>Landing page</td><td>Reassuring, evidence-forward</td></tr>
+          <tr><td>Label / packaging</td><td>Precise, clinical</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 LOGO ============ -->
+<section class="block" id="logo">
+  <div class="wrap reveal">
+    <p class="sec-no">03 — Logo System</p>
+    <h2 class="section-title">The logo.</h2>
+    <p class="lede">The wordmark pairs the AshwaMag name with the Root Labs endorsement. The brand mark is clinical green, "Mag" carries the berry product cue. One mark, three colorways. Drop the approved SVG into the lockups below.</p>
+
+    <div class="grid mt-l" style="gap:16px;">
+      <div class="lockup">
+        <div class="mark">A</div>
+        <div>
+          <div class="wordmark">Ashwa<span>Mag</span></div>
+          <span class="sub">By Root Labs</span>
+        </div>
+      </div>
+      <div class="lockup-meta">
+        <span class="label">Green on bone · default</span>
+        <small>Landing pages · packaging · email · product UI</small>
+      </div>
+
+      <div class="lockup" style="margin-top:8px;">
+        <div class="mark" style="background:var(--ink);">A</div>
+        <div>
+          <div class="wordmark" style="color:var(--ink);">AshwaMag</div>
+          <span class="sub">By Root Labs</span>
+        </div>
+      </div>
+      <div class="lockup-meta">
+        <span class="label">Mono ink · single-color contexts</span>
+        <small>Print · embossing · single-color print</small>
+      </div>
+
+      <div class="lockup dark" style="margin-top:8px;">
+        <div class="mark">A</div>
+        <div>
+          <div class="wordmark">AshwaMag</div>
+          <span class="sub">By Root Labs</span>
+        </div>
+      </div>
+      <div class="lockup-meta">
+        <span class="label">On dark · ad creative</span>
+        <small>Dark backgrounds · social · campaign film</small>
+      </div>
+    </div>
+
+    <div class="grid g2 mt-l">
+      <div class="card">
+        <span class="label">Placement &amp; clear space</span>
+        <ul style="margin:8px 0 0; padding-left:18px; color:var(--ink-2); font-size:15.5px; line-height:1.7;">
+          <li>Top-left on pages and email headers.</li>
+          <li>Clear space on all sides equal to the height of the mark.</li>
+          <li>Minimum width 120px so the wordmark stays legible. Below that, use the mark alone.</li>
+          <li>Spacing between mark and wordmark is fixed. Never rebuild the lockup by hand.</li>
+        </ul>
+      </div>
+      <div class="frame no">
+        <span class="pill no">Misuse — never</span>
+        <ul>
+          <li>Recolor outside the three approved colorways.</li>
+          <li>Stretch, rotate, or add shadow, glow, or gradient.</li>
+          <li>Place on a busy image that hurts legibility.</li>
+          <li>Drop "by Root Labs" when context requires the endorsement.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">Source files: <code>assets/ashwamag-logo-{green,ink,white}.svg</code> — vector, scales to any size. Replace the placeholder marks above with the approved artwork.</p>
+  </div>
+</section>
+
+<!-- ============ 04 COLOR & TYPOGRAPHY ============ -->
+<section class="block" id="color">
+  <div class="wrap reveal">
+    <p class="sec-no">04 — Color &amp; Typography</p>
+    <h2 class="section-title">Cool bone, clinical green.</h2>
+    <p class="lede">A restrained, premium palette led by one deep clinical green. A cool bone canvas and charcoal ink do the heavy lifting. Berry belongs to the product and appears only with intent.</p>
+
+    <p class="label mt-l" style="margin-bottom:14px;">Core palette</p>
+    <div class="grid g3 keep">
+      <div class="sw"><div class="chip" style="background:#F1F3EE;"></div><div class="meta"><div class="name">Bone</div><div class="hex">#F1F3EE</div><div class="use">Primary canvas</div></div></div>
+      <div class="sw"><div class="chip" style="background:#FFFFFF; border-bottom:1px solid var(--hair);"></div><div class="meta"><div class="name">Surface</div><div class="hex">#FFFFFF</div><div class="use">Cards, sections</div></div></div>
+      <div class="sw"><div class="chip" style="background:#181C19;"></div><div class="meta"><div class="name">Ink</div><div class="hex">#181C19</div><div class="use">Headlines, body on light</div></div></div>
+      <div class="sw"><div class="chip" style="background:#33513F;"></div><div class="meta"><div class="name">Green — primary</div><div class="hex">#33513F</div><div class="use">CTAs, marks, numerals, the clinical lead</div></div></div>
+      <div class="sw"><div class="chip" style="background:#CDE3B0;"></div><div class="meta"><div class="name">Green — highlighter</div><div class="hex">#CDE3B0</div><div class="use">One word at a time, never a background</div></div></div>
+      <div class="sw"><div class="chip" style="background:#E9EFE6;"></div><div class="meta"><div class="name">Green mist</div><div class="hex">#E9EFE6</div><div class="use">Soft tint, callout backgrounds</div></div></div>
+      <div class="sw"><div class="chip" style="background:#7C2D43;"></div><div class="meta"><div class="name">Berry — product</div><div class="hex">#7C2D43</div><div class="use">The gummy, the science, "Mag" only</div></div></div>
+      <div class="sw"><div class="chip" style="background:#4E564D;"></div><div class="meta"><div class="name">Ink secondary</div><div class="hex">#4E564D</div><div class="use">Body and supporting text</div></div></div>
+      <div class="sw"><div class="chip" style="background:#E1E5DB;"></div><div class="meta"><div class="name">Hairline</div><div class="hex">#E1E5DB</div><div class="use">Borders, dividers</div></div></div>
+    </div>
+
+    <div class="grid g2 mt-l">
+      <div class="callout">
+        <p class="label">Green — the lead, and the highlighter</p>
+        <p style="color:var(--ink); font-size:15.5px; margin-top:10px;">Green carries the clinical brand: CTAs, marks, numerals, proof. As a highlighter it <span class="hl">marks</span> the one or two words that carry a headline's meaning. It is a highlighter, never a fill.</p>
+      </div>
+      <div class="card" style="border-color:var(--berry);">
+        <p class="label" style="color:var(--berry);">Berry — the product color</p>
+        <p style="margin-top:10px;">Berry belongs to the gummy itself. Use it in the wordmark's "Mag", on the product, and inside the science. Everywhere else, green leads. Keep berry rare so it stays meaningful.</p>
+      </div>
+    </div>
+
+    <p class="label mt-l" style="margin-bottom:14px;">Typeface roles</p>
+    <div class="typespec">
+      <div class="head"><span class="label">Display headline</span><span class="label">Fraunces · 360–400</span></div>
+      <div class="specimen-serif">Rested, <em>not <span class="hl">sedated</span>.</em></div>
+      <p>An optical serif with warmth and authority. Used large, light, and sparingly for headlines and the core narrative.</p>
+    </div>
+    <div class="typespec mt-s">
+      <div class="head"><span class="label">Body, UI &amp; labels</span><span class="label">Inter · 450–600</span></div>
+      <div class="specimen-sans">A doctor-led sleep formula, built for women 35+.</div>
+      <p>Clean, neutral, clinical. Hierarchy comes from size and letter-spacing, not decoration.</p>
+    </div>
+
+    <table class="scale mt-m">
+      <tr><th>Role</th><th>Font</th><th>Size</th></tr>
+      <tr><td>Display</td><td>Fraunces · 380</td><td>clamp 44–92px</td></tr>
+      <tr><td>Section title</td><td>Fraunces · 400</td><td>30–48px</td></tr>
+      <tr><td>Lede</td><td>Inter · 450</td><td>17–20px</td></tr>
+      <tr><td>Body</td><td>Inter · 450</td><td>16–17px</td></tr>
+      <tr><td>Label / eyebrow</td><td>Inter · 600 · 0.16em uppercase</td><td>11–12px</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ============ 05 THE SCIENCE ============ -->
+<section class="block" id="science">
+  <div class="wrap reveal">
+    <p class="sec-no">05 — The Science</p>
+    <h2 class="section-title">The mechanism is the message.</h2>
+    <p class="lede">This is the clinical heart of the brand. Every claim traces back to a dose and a study on this page. When in doubt, explain the biology before the benefit.</p>
+
+    <div class="callout dark mt-l">
+      <p class="label">The cortisol–magnesium loop</p>
+      <p style="margin-top:12px; font-size:16px;">Stress keeps cortisol elevated into the night, and it can surge around 3&nbsp;a.m. That surge burns through magnesium reserves and fragments deep sleep. Less magnesium means a sharper cortisol spike the next night. The loop tightens. AshwaMag replenishes magnesium so the loop loosens and deep sleep returns.</p>
+    </div>
+
+    <div class="grid g2 mt-l">
+      <div class="card">
+        <span class="label">How liposomal delivery works</span>
+        <div class="mt-s">
+          <div class="step"><span class="n">1</span><div><div class="t">Lipid shell</div><div class="d">Magnesium is encased in a lipid bilayer that mimics the body's fat-soluble carriers.</div></div></div>
+          <div class="step"><span class="n">2</span><div><div class="t">Survives stomach acid</div><div class="d">The shell protects the mineral through the gut instead of dumping it all at once.</div></div></div>
+          <div class="step"><span class="n">3</span><div><div class="t">Sustained release</div><div class="d">Steady intestinal absorption across roughly 12 hours, with about 17% better uptake.</div></div></div>
+        </div>
+      </div>
+      <div class="card">
+        <span class="label">Actives &amp; clinical dose</span>
+        <table class="scale" style="margin-top:4px;">
+          <tr><th>Ingredient</th><th>Dose</th></tr>
+          <tr><td>Magnesium glycinate</td><td>675 mg</td></tr>
+          <tr><td>KSM-66 ashwagandha</td><td>200 mg</td></tr>
+          <tr><td>L-theanine</td><td>26 mg</td></tr>
+          <tr><td>Chicory root fibre</td><td>8.76 g</td></tr>
+        </table>
+        <p style="font-size:13.5px; margin-top:14px;">Two gummies nightly, about 30 minutes before bed. 30-day supply. No melatonin, no added sugar, hormone-free. Chicory fibre adds about 25% of your daily fibre.</p>
+      </div>
+    </div>
+
+    <div class="callout mt-s">
+      <p class="label">No sugar. Sweetened with fibre.</p>
+      <p style="color:var(--ink); font-size:16px; margin-top:10px;">Most gummies hide sugar. AshwaMag uses <span class="hl">none</span>. The sweetness comes from chicory root fibre, which also delivers 8.76&nbsp;g of fibre, about 25% of your daily requirement.</p>
+    </div>
+
+    <div class="card mt-s">
+      <span class="label">The evidence we cite</span>
+      <div class="mt-s" style="display:grid; gap:12px;">
+        <p class="cite">Magnesium glycinate: <b>−17 min faster sleep onset</b> vs. placebo. Abbasi et&nbsp;al., 2012.</p>
+        <p class="cite">KSM-66 ashwagandha: <b>+72% sleep quality</b> vs. placebo. Langade et&nbsp;al., 2019.</p>
+        <p class="cite">L-theanine: <b>improved sleep latency</b> in clinical context. Hidese et&nbsp;al., 2019.</p>
+      </div>
+      <p class="note">Every stat above must appear with its citation wherever it is used. Strip the citation and you strip the claim.</p>
+      <div style="margin-top:18px; padding-top:18px; border-top:1px solid var(--hair);">
+        <span class="label" style="color:var(--green); display:block; margin-bottom:8px;">Backed by 7 certifications</span>
+        <p style="font-size:13.5px; color:var(--ink-2); margin:0;">Third-party tested by Eurofins, batch by batch, plus 7 certifications. Reference each certification by name and number wherever the claim appears. <span style="color:var(--ink-3);">[Add the names of the 7 certifications here.]</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 IMAGERY ============ -->
+<section class="block" id="imagery">
+  <div class="wrap reveal">
+    <p class="sec-no">06 — Imagery Direction</p>
+    <h2 class="section-title">Real people. Clinical calm.</h2>
+    <p class="lede">Imagery is where credibility breaks fastest. One fake or fear-driven image undoes everything else in this book. Shoot real. Stay calm.</p>
+
+    <div class="callout dark mt-l">
+      <p class="label">The hard rule</p>
+      <p style="margin-top:10px;"><strong>Never use AI-generated images of people, results, or product.</strong> Real women, real product, real settings. This is a trust brand in a category full of stock-photo theatrics.</p>
+    </div>
+
+    <div class="grid g2 mt-l">
+      <div class="frame yes">
+        <span class="pill yes">Style</span>
+        <ul>
+          <li>Cool bone and soft green backgrounds. Even, calm, clinical light.</li>
+          <li>Macro of the berry gummy and the lipid-bilayer illustration.</li>
+          <li>Real women 35+, calm and rested. Relatable but premium.</li>
+          <li>Product label always legible. Texture and detail over gloss.</li>
+        </ul>
+      </div>
+      <div class="frame no">
+        <span class="pill no">Never</span>
+        <ul>
+          <li>The "tired woman clutching her head" cliché.</li>
+          <li>Fear or distress imagery. No darkness as dread.</li>
+          <li>Melatonin-style moon-and-stars sedative tropes.</li>
+          <li>Generic stock that could belong to any supplement.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout mt-s">
+      <p class="label">Acceptable alternative</p>
+      <p style="color:var(--ink); font-size:16px; margin-top:10px;">When there is no real, on-brand photo, <span class="hl">type carries the piece</span>. A clean Fraunces headline on bone outperforms a weak stock image every time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 MOTION ============ -->
+<section class="block" id="motion">
+  <div class="wrap reveal">
+    <p class="sec-no">07 — Motion</p>
+    <h2 class="section-title">Calm, never frantic.</h2>
+    <p class="lede">Motion should feel like the brand voice: considered and purposeful. It guides the eye toward sleep, not away from it. It is never decoration.</p>
+
+    <div class="grid g2 mt-l">
+      <div class="card">
+        <span class="label">Principles</span>
+        <ul style="margin:8px 0 0; padding-left:18px; color:var(--ink-2); font-size:15.5px; line-height:1.7;">
+          <li><strong style="color:var(--ink)">Calm over playful.</strong> Subtle fades, gentle slides. No bounce or spring.</li>
+          <li><strong style="color:var(--ink)">Easing:</strong> ease-out for entrances, ease-in-out for transitions.</li>
+          <li><strong style="color:var(--ink)">Duration:</strong> 200–400ms for UI, up to ~700ms for section reveals.</li>
+          <li><strong style="color:var(--ink)">Highlight reveal:</strong> the green highlight may draw in once per view, sparingly.</li>
+        </ul>
+      </div>
+      <div class="frame no">
+        <span class="pill no">Never</span>
+        <ul>
+          <li>Flashing, rapid strobing, or aggressive parallax.</li>
+          <li>Looping animation that competes with the message.</li>
+          <li>Motion for its own sake.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout mt-s">
+      <p class="label">Honor reduced motion</p>
+      <p style="color:var(--ink); font-size:16px; margin-top:10px;">When a user has <code style="background:#fff;padding:2px 7px;border-radius:6px;font-size:13px;">prefers-reduced-motion</code> on, replace animation with an instant change or a simple fade. See Accessibility.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08 DIGITAL / UI ============ -->
+<section class="block" id="digital">
+  <div class="wrap reveal">
+    <p class="sec-no">08 — Digital / UI</p>
+    <h2 class="section-title">The brand in product.</h2>
+    <p class="lede">How AshwaMag shows up on the web and in ads. Pages and ads are one emotional contract, built together.</p>
+
+    <div class="card mt-l" style="display:flex; align-items:center; gap:22px; flex-wrap:wrap;">
+      <a href="#" class="btn" onclick="return false;">Find your sleep plan
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#" class="btn ghost" onclick="return false;">See the science</a>
+      <span style="font-family:var(--serif); font-style:italic; color:var(--ink-2); font-size:19px;">Rested, not sedated.</span>
+    </div>
+    <p class="note">CTA buttons: pill-shaped, green <code>#33513F</code> fill, white text. Ghost button for secondary actions. Cards use an 18px radius and a single hairline border. Shadows stay almost invisible. Premium reads as restraint.</p>
+
+    <div class="grid g2 mt-l">
+      <div class="card">
+        <span class="label">Ad formats</span>
+        <table class="scale" style="margin-top:4px;">
+          <tr><td>Feed square</td><td>1080 × 1080</td></tr>
+          <tr><td>Story / Reel</td><td>1080 × 1920</td></tr>
+          <tr><td>Feed landscape</td><td>1080 × 566</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <span class="label">CTA hierarchy — one per campaign</span>
+        <table class="scale" style="margin-top:4px;">
+          <tr><td>Cold traffic</td><td>Take the sleep quiz</td></tr>
+          <tr><td>Solution-aware</td><td>See how it works</td></tr>
+          <tr><td>Retargeting</td><td>Start your 90 nights</td></tr>
+          <tr><td>Closing</td><td>Claim 25% welcome offer</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="callout mt-s">
+      <p class="label">The ad-to-page contract</p>
+      <p style="color:var(--ink); font-size:16px; margin-top:10px;">Whatever the ad promises, the landing page must deliver in the first three seconds. The ad and its page are one contract, built in the same campaign folder.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 09 ACCESSIBILITY ============ -->
+<section class="block" id="access">
+  <div class="wrap reveal">
+    <p class="sec-no">09 — Accessibility</p>
+    <h2 class="section-title">An honest brand is usable.</h2>
+    <p class="lede">Accessibility is part of the brand, not an afterthought. A brand for women 35+ has to be effortless to read and use.</p>
+
+    <div class="card mt-l">
+      <table class="scale">
+        <tr><th>Standard</th><th>The rule</th></tr>
+        <tr><td>Contrast</td><td>Meet WCAG AA (4.5:1). White on green #33513F and ink on bone pass. Never put green-highlight text on bone.</td></tr>
+        <tr><td>Reduced motion</td><td>Respect prefers-reduced-motion. Swap animations for instant or simple fades.</td></tr>
+        <tr><td>Alt text</td><td>Every meaningful image gets descriptive alt text. Decorative images get empty alt text.</td></tr>
+        <tr><td>Tap targets</td><td>Interactive elements at least 44 × 44px.</td></tr>
+        <tr><td>Type size</td><td>Body text never below 16px on web.</td></tr>
+        <tr><td>Color alone</td><td>Never rely on color to carry meaning. The green highlight always sits on a word that reads fine in plain text.</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10 CLAIMS & EVIDENCE ============ -->
+<section class="block" id="claims">
+  <div class="wrap reveal">
+    <p class="sec-no">10 — Claims &amp; Evidence Integrity</p>
+    <h2 class="section-title">If we can't prove it, we don't say it.</h2>
+    <p class="lede">This is a supplement in a regulated, skeptical category. These rules keep every claim defensible and every testimonial honest.</p>
+
+    <div class="grid g2 mt-l">
+      <div class="frame no">
+        <span class="pill no">Banned — no exceptions</span>
+        <ul>
+          <li>Disease claims. We never say "treats", "cures", or "diagnoses".</li>
+          <li>Fabricated stats, studies, testimonials, or credentials.</li>
+          <li>"Knock you out", "miracle", "guaranteed" sleep language.</li>
+          <li>Implying overnight results. The honest curve is 18–28 days.</li>
+        </ul>
+      </div>
+      <div class="frame yes">
+        <span class="pill yes">Allowed — with proof</span>
+        <ul>
+          <li>Structure-function claims tied to the actual dose in the product.</li>
+          <li>Cited study results, with the citation shown alongside.</li>
+          <li>Real reviews, disclosed: "compensated for time, not opinion. Results vary."</li>
+          <li>"#1 on TikTok" and "#1 doctor-recommended", only with the source, metric, and date that back them.</li>
+          <li>Third-party testing and all 7 certifications, referenced by name.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout mt-s">
+      <p class="label">The test</p>
+      <p class="quote">Would a sleep physician read this and nod? If yes, ship it. If they would wince, <span class="hl">rewrite it</span>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NORTH STAR ============ -->
+<section class="block">
+  <div class="wrap reveal">
+    <p class="eyebrow green">The North Star</p>
+    <h2 class="section-title">If you remember nothing else.</h2>
+
+    <div class="callout mt-m">
+      <p class="quote">The best-absorbed magnesium combination, built for deep sleep. No melatonin. No sugar. No grogginess. No dependency. <span class="hl">Rested, not sedated.</span></p>
+      <p class="label" style="margin-top:22px;">The AshwaMag promise · v1.0</p>
+    </div>
+
+    <div class="grid g2 mt-m">
+      <div class="card">
+        <span class="label">One rule</span>
+        <p>The ad and the landing page are one contract. Whatever the ad promises, the page delivers it in three seconds.</p>
+      </div>
+      <div class="card">
+        <span class="label">One filter</span>
+        <p>Before anything ships, ask: "Would a thoughtful sleep doctor read this and nod?" If yes, ship it. If they would wince, rewrite it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site">
+  <div class="wrap">
+    <p class="fnote">AshwaMag · By Root Labs · Brand Guide · v1.0 · May 2026</p>
+  </div>
+</footer>
+
+<script>
+  // Calm, accessible scroll reveal
+  (function () {
+    var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var items = document.querySelectorAll('.reveal');
+    if (prefersReduced || !('IntersectionObserver' in window)) {
+      items.forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    items.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+</body>
+</html>
