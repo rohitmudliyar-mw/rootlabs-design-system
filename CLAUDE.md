@@ -30,9 +30,10 @@ npx vercel deploy --prod --yes   # deploy to production
 ## Routes
 
 - `/` — the design guide (brand, foundations, components, examples)
+- `/components` — API reference with prop tables for every component
 - `/installation` — setup & usage docs
-- `/landing` — sample landing page (AshwaMag)
-- `/product` — sample product detail page (AshwaMag)
+- `/landing` — sample landing page
+- `/product` — sample product detail page (PDP)
 
 ## Project structure
 

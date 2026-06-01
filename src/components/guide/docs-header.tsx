@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 
 const tabs = [
   { label: "Overview", href: "/" },
+  { label: "Components", href: "/components" },
   { label: "Installation", href: "/installation" },
 ];
 
