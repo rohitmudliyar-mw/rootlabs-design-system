@@ -77,8 +77,30 @@ Credible, calm, evidence-forward, honest, supportive. **Never** use hype, fear, 
 cite the dose and the study. The honest results curve is 18–28 days. Filter: _"Would a
 thoughtful sleep doctor read this and nod?"_
 
+## Workflow — update & ship
+
+See `WORKFLOW.md` for the full version. The system is DRY, so changes propagate:
+
+- Change a **token** → `src/app/globals.css` → updates every component & page. **Then mirror
+  the value in `DESIGN.md`** (the one manual sync).
+- Change **copy** → `src/lib/content.ts` → updates landing + product.
+- Change a **component** → `src/components/**` → updates every page that imports it.
+- Add a **new component type** → also add a showcase block in `src/app/page.tsx` and, if
+  relevant, a snippet on `src/app/installation/page.tsx`.
+- Add a **folder/route** → update the structure notes above.
+
+**Ship everything in one command:**
+
+```bash
+npm run ship "what you changed"   # build → commit → push → deploy to prod → re-alias domain
+```
+
+If the build fails, nothing is committed or deployed. CI (`.github/workflows/ci.yml`) also
+builds on every push/PR.
+
 ## Deploy
 
-Push to `main`, then `npx vercel deploy --prod --yes`. Vercel project: `rootlabs-design-system`
-(team `rohits-projects-e06afadc`). Auto-deploy-on-push is not yet connected (do it via the
-Vercel dashboard → Settings → Git if desired).
+`npm run ship "..."` is the normal path. Manual equivalent: `npm run build`, commit, push,
+then `npm run deploy` (`vercel deploy --prod --yes`). Vercel project: `rootlabs-design-system`
+(team `rohits-projects-e06afadc`). For hands-free deploy on push, connect the Vercel Git
+integration in the dashboard (Settings → Git).

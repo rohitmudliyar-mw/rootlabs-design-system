@@ -98,6 +98,7 @@ export default function InstallationPage() {
                 "Add components",
                 "Deploy",
                 "Files for AI tools",
+                "Update & ship",
               ].map((t) => (
                 <p key={t} className="text-[14.5px] text-ink-2">
                   {t}
@@ -316,6 +317,47 @@ npx vercel deploy --prod --yes`}
                 >
                   {REPO.replace("https://", "")} <ArrowUpRight className="size-3.5" />
                 </a>
+              </p>
+            </Step>
+
+            <Step no="11" title="Update & ship">
+              <p className="text-[16px] leading-[1.6] text-ink-2">
+                The system is DRY, so most changes propagate on their own — edit
+                the source once and every page follows.
+              </p>
+              <div className="mt-4 grid gap-3 sm:grid-cols-3">
+                {[
+                  ["Tokens", "src/app/globals.css", "updates every page"],
+                  ["Copy", "src/lib/content.ts", "updates landing + product"],
+                  ["Components", "src/components/**", "updates every importer"],
+                ].map(([k, file, note]) => (
+                  <Card key={k} className="p-4">
+                    <Label>{k}</Label>
+                    <code className="mt-2 block text-[12.5px] text-green">
+                      {file}
+                    </code>
+                    <p className="mt-1 text-[13px] text-ink-2">{note}</p>
+                  </Card>
+                ))}
+              </div>
+              <p className="mt-5 text-[16px] leading-[1.6] text-ink-2">
+                When you change a token, also mirror it in{" "}
+                <code className="rounded bg-bone-2 px-1.5 py-0.5 text-[13px]">
+                  DESIGN.md
+                </code>
+                . Then ship everything — build, commit, push, and deploy — in one
+                command:
+              </p>
+              <CodeBlock label="Terminal" className="mt-4">
+                npm run ship &quot;describe what you changed&quot;
+              </CodeBlock>
+              <p className="mt-3 text-[14px] text-ink-3">
+                If the build fails, nothing is committed or deployed. CI also
+                builds on every push. Full details in{" "}
+                <code className="rounded bg-bone-2 px-1.5 py-0.5 text-[13px]">
+                  WORKFLOW.md
+                </code>
+                .
               </p>
             </Step>
           </div>
