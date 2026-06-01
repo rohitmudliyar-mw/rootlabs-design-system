@@ -17,5 +17,7 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - run: npm ci
+      # npm install (not npm ci) so platform-specific native/optional deps
+      # resolve on the Linux runner — the lockfile is generated on macOS.
+      - run: npm install --no-audit --no-fund
       - run: npm run build
