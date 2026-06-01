@@ -57,16 +57,30 @@ npm run deploy                     # 4. deploy to production
 `.github/workflows/ci.yml` runs the build on every push and pull request, so a
 broken change shows a ❌ on GitHub before it reaches users. No setup required.
 
-## Optional: hands-free deploy on push
+## Hands-free deploy on push (autodeploy)
 
-To make **every `git push` auto-deploy** (no `npm run ship` needed), connect the
-Vercel Git integration once:
+Make **every `git push` auto-deploy** — pick ONE:
+
+**Option A — Vercel Git integration (simplest, recommended).** One-time, in the
+browser, no tokens:
 
 > vercel.com → **rootlabs-design-system** → Settings → **Git** → connect the
 > `rohitmudliyar-mw/rootlabs-design-system` repo.
 
-After that: push to `main` → Vercel builds and deploys to production
-automatically. Pushes to other branches get a preview URL.
+After that, push to `main` → Vercel builds & deploys to production; other branches
+get preview URLs.
+
+**Option B — GitHub Actions (already wired, needs one secret).** The workflow
+`.github/workflows/deploy.yml` deploys to prod and re-aliases the domain on every
+push to `main`. It stays **inert until** you add a Vercel token:
+
+```bash
+# create a token at https://vercel.com/account/tokens, then:
+gh secret set VERCEL_TOKEN --repo rohitmudliyar-mw/rootlabs-design-system
+```
+
+Until the secret exists, the deploy job is **skipped** (never a red failure). With
+both options you can stop running `npm run ship` and just `git push`.
 
 ## Quick reference
 

@@ -1,7 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 
-import { Container } from "@/components/brand";
-import { RootLabsWordmark } from "./root-labs-wordmark";
+import { Container, BrandLogo } from "@/components/brand";
 
 const REPO = "https://github.com/rohitmudliyar-mw/rootlabs-design-system";
 
@@ -12,7 +11,7 @@ export function DocsFooter() {
         size="wide"
         className="flex flex-col gap-4 py-10 sm:flex-row sm:items-center sm:justify-between"
       >
-        <RootLabsWordmark />
+        <BrandLogo surface="light" height={34} />
         <div className="flex flex-wrap items-center gap-5 text-[13px] text-ink-3">
           <a
             href={REPO}

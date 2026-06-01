@@ -1,15 +1,23 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
-import { ProductVisual } from "@/components/brand";
 import { cn } from "@/lib/utils";
 
 const shots = [
-  { label: "Front of bottle", tone: "mist" as const },
-  { label: "The gummy, macro", tone: "berry" as const },
-  { label: "Supplement facts", tone: "bone" as const },
-  { label: "In context", tone: "mist" as const },
+  {
+    src: "/product/pouch-hero.png",
+    alt: "Root Labs Liposomal Magnesium + Ashwagandha gummies pouch",
+  },
+  {
+    src: "/product/gummies-bowl.jpg",
+    alt: "Berry gummies falling into a glass bowl",
+  },
+  {
+    src: "/product/lifestyle-man.jpg",
+    alt: "A man holding a single Root Labs gummy",
+  },
 ];
 
 export function ProductGallery() {
@@ -17,29 +25,35 @@ export function ProductGallery() {
 
   return (
     <div>
-      <ProductVisual
-        ratio="square"
-        tone={shots[active].tone}
-        label={shots[active].label}
-      />
-      <div className="mt-3 grid grid-cols-4 gap-3">
+      <div className="relative aspect-square overflow-hidden rounded-xl border border-hair bg-bone-2">
+        <Image
+          src={shots[active].src}
+          alt={shots[active].alt}
+          fill
+          priority
+          sizes="(min-width: 1024px) 50vw, 100vw"
+          className="object-cover"
+        />
+      </div>
+      <div className="mt-3 grid grid-cols-3 gap-3">
         {shots.map((s, i) => (
           <button
-            key={s.label}
+            key={s.src}
             type="button"
             onClick={() => setActive(i)}
-            aria-label={`View ${s.label}`}
+            aria-label={`View ${s.alt}`}
             aria-pressed={active === i}
             className={cn(
-              "overflow-hidden rounded-lg border-2 transition-colors",
-              active === i ? "border-green" : "border-transparent"
+              "relative aspect-square overflow-hidden rounded-lg border-2 bg-bone-2 transition-colors",
+              active === i ? "border-green" : "border-transparent hover:border-hair"
             )}
           >
-            <ProductVisual
-              ratio="square"
-              tone={s.tone}
-              label=""
-              className="rounded-md border-0"
+            <Image
+              src={s.src}
+              alt=""
+              fill
+              sizes="120px"
+              className="object-cover"
             />
           </button>
         ))}

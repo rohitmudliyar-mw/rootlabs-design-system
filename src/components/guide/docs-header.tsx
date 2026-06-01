@@ -3,8 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { Container } from "@/components/brand";
-import { RootLabsWordmark } from "./root-labs-wordmark";
+import { Container, BrandLogo } from "@/components/brand";
 import { cn } from "@/lib/utils";
 
 const tabs = [
@@ -20,7 +19,7 @@ export function DocsHeader() {
       <Container size="wide" className="flex h-16 items-center justify-between gap-4">
         <div className="flex items-center gap-5">
           <Link href="/" aria-label="Root Labs design system">
-            <RootLabsWordmark />
+            <BrandLogo surface="light" height={34} priority />
           </Link>
           <span className="hidden text-[11px] uppercase tracking-[0.16em] text-ink-3 lg:inline">
             Design System · v1.0

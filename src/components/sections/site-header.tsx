@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu } from "lucide-react";
 
-import { Logo } from "@/components/brand";
+import { BrandLogo } from "@/components/brand";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -26,8 +26,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-hair bg-bone/80 backdrop-blur-md backdrop-saturate-150">
       <div className="mx-auto flex h-16 max-w-[1280px] items-center justify-between px-5 sm:px-8 lg:px-12">
-        <Link href="/" aria-label="AshwaMag home">
-          <Logo />
+        <Link href="/" aria-label="Root Labs home">
+          <BrandLogo surface="light" height={30} priority />
         </Link>
 
         {/* Desktop nav */}
@@ -60,7 +60,7 @@ export function SiteHeader() {
             </SheetTrigger>
             <SheetContent side="right" className="bg-bone p-6">
               <SheetTitle className="sr-only">Menu</SheetTitle>
-              <Logo className="mt-1" />
+              <BrandLogo surface="light" height={32} className="mt-1" />
               <nav className="mt-10 flex flex-col gap-1">
                 {nav.map((item) => (
                   <SheetClose

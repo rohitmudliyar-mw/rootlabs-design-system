@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowRight, Check, X } from "lucide-react";
 
 import {
@@ -12,8 +13,7 @@ import {
   Callout,
   Pill,
   Stars,
-  Logo,
-  ProductVisual,
+  BrandLogo,
 } from "@/components/brand";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -505,16 +505,36 @@ export default function DesignGuide() {
               </div>
             </GuideSection>
 
-            {/* COMPONENTS — LOGO */}
+            {/* COMPONENTS — LOGO & IMAGERY */}
             <GuideSection id="logo" no="12" title="Logo & imagery">
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                <div className="grid place-items-center rounded-xl border border-hair bg-surface p-10">
-                  <Logo />
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="grid place-items-center rounded-xl border border-hair bg-surface p-12">
+                  <BrandLogo surface="light" height={72} />
                 </div>
-                <div className="grid place-items-center rounded-xl border border-ink bg-ink p-10">
-                  <Logo colorway="dark" />
+                <div className="grid place-items-center rounded-xl border border-ink bg-ink p-12">
+                  <BrandLogo surface="dark" height={72} />
                 </div>
-                <ProductVisual ratio="wide" label="Photo placeholder" />
+              </div>
+              <Label className="mt-7 block">Imagery — real, clinical, calm</Label>
+              <div className="mt-3 grid gap-4 sm:grid-cols-3">
+                {[
+                  { src: "/product/pouch-hero.png", alt: "Product pouch" },
+                  { src: "/product/gummies-bowl.jpg", alt: "Berry gummies" },
+                  { src: "/product/lifestyle-man.jpg", alt: "Lifestyle" },
+                ].map((img) => (
+                  <div
+                    key={img.src}
+                    className="relative aspect-[4/5] overflow-hidden rounded-xl border border-hair bg-bone-2"
+                  >
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      sizes="(min-width:640px) 33vw, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
+                ))}
               </div>
             </GuideSection>
 

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { Container, Logo } from "@/components/brand";
+import { Container, BrandLogo } from "@/components/brand";
 
 const groups = [
   {
@@ -23,7 +23,7 @@ export function SiteFooter() {
       <Container className="py-14">
         <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div>
-            <Logo />
+            <BrandLogo surface="light" height={34} />
             <p className="mt-4 max-w-[32ch] text-[14px] leading-[1.55] text-ink-2">
               Doctor-led sleep science. We restore the deep sleep stress takes
               away — we never sedate.
