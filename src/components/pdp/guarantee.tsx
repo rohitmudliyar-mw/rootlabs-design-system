@@ -34,7 +34,7 @@ export function Guarantee() {
             <div key={item.title} className="flex gap-3.5">
               <item.icon className="size-6 flex-none text-green" />
               <div>
-                <h3 className="text-[15px] font-semibold text-ink">
+                <h3 className="text-[16px] font-semibold text-ink">
                   {item.title}
                 </h3>
                 <p className="mt-1 text-[14px] leading-[1.5] text-ink-2">

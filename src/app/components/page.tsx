@@ -51,9 +51,9 @@ function Ref({
       className="scroll-mt-24 border-t border-hair py-10 first:border-t-0"
     >
       <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-        <code className="font-mono text-[18px] font-semibold text-ink">
+        <h3 className="font-mono text-[18px] font-semibold text-ink">
           {name}
-        </code>
+        </h3>
         {extendsEl && (
           <span className="text-[12px] text-ink-3">
             extends <code className="font-mono">{extendsEl}</code> props

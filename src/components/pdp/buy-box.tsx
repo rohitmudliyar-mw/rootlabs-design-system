@@ -50,7 +50,7 @@ export function BuyBox() {
       {/* Benefits */}
       <ul className="mt-6 space-y-2.5">
         {benefits.map((b) => (
-          <li key={b} className="flex gap-2.5 text-[15.5px] text-ink-2">
+          <li key={b} className="flex gap-2.5 text-[16px] text-ink-2">
             <Check className="mt-0.5 size-4 flex-none text-green" />
             {b}
           </li>
@@ -76,10 +76,10 @@ export function BuyBox() {
             <RadioGroupItem value={p.id} className="mt-1" />
             <div className="flex-1">
               <div className="flex items-center justify-between gap-2">
-                <span className="text-[15.5px] font-semibold text-ink">
+                <span className="text-[16px] font-semibold text-ink">
                   {p.label}
                 </span>
-                <span className="text-[15.5px] font-semibold text-ink">
+                <span className="text-[16px] font-semibold text-ink">
                   ${p.price}
                 </span>
               </div>
@@ -108,7 +108,7 @@ export function BuyBox() {
           >
             <Minus className="size-4" />
           </button>
-          <span className="w-8 text-center text-[15px] font-semibold tabular-nums text-ink">
+          <span className="w-8 text-center text-[16px] font-semibold tabular-nums text-ink">
             {qty}
           </span>
           <button

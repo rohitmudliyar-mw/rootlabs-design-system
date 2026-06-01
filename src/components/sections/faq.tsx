@@ -24,7 +24,7 @@ export function Faq() {
               <AccordionTrigger className="py-5 font-serif text-[19px] text-ink hover:no-underline">
                 {item.q}
               </AccordionTrigger>
-              <AccordionContent className="text-[15.5px] leading-[1.6] text-ink-2">
+              <AccordionContent className="text-[16px] leading-[1.6] text-ink-2">
                 {item.a}
               </AccordionContent>
             </AccordionItem>

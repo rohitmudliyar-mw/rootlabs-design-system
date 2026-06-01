@@ -26,7 +26,7 @@ export function Comparison() {
               {comparison.us.map((item) => (
                 <li
                   key={item}
-                  className="flex gap-3 border-b border-black/[0.06] py-3 text-[15.5px] text-ink-2 last:border-b-0"
+                  className="flex gap-3 border-b border-black/[0.06] py-3 text-[16px] text-ink-2 last:border-b-0"
                 >
                   <Check className="mt-0.5 size-4 flex-none text-green" />
                   {item}
@@ -42,7 +42,7 @@ export function Comparison() {
               {comparison.them.map((item) => (
                 <li
                   key={item}
-                  className="flex gap-3 border-b border-black/[0.05] py-3 text-[15.5px] text-ink-2 last:border-b-0"
+                  className="flex gap-3 border-b border-black/[0.05] py-3 text-[16px] text-ink-2 last:border-b-0"
                 >
                   <X className="mt-0.5 size-4 flex-none text-warn" />
                   {item}

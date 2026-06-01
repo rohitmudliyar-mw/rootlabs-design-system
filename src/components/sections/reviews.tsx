@@ -21,7 +21,7 @@ export function Reviews() {
           </div>
           <div className="flex items-center gap-3">
             <Stars rating={product.rating} size={20} />
-            <span className="text-[15px] text-ink-2">
+            <span className="text-[16px] text-ink-2">
               <span className="font-semibold text-ink">{product.rating}</span> ·{" "}
               {product.reviewCount.toLocaleString()} reviews
             </span>

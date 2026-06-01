@@ -29,19 +29,19 @@ export function SupplementFacts() {
           >
             <TabsTrigger
               value="facts"
-              className="h-auto px-1 pb-3 text-[15px] data-active:text-green"
+              className="h-auto px-1 pb-3 text-[16px] data-active:text-green"
             >
               Supplement Facts
             </TabsTrigger>
             <TabsTrigger
               value="how"
-              className="h-auto px-1 pb-3 text-[15px] data-active:text-green"
+              className="h-auto px-1 pb-3 text-[16px] data-active:text-green"
             >
               How to use
             </TabsTrigger>
             <TabsTrigger
               value="why"
-              className="h-auto px-1 pb-3 text-[15px] data-active:text-green"
+              className="h-auto px-1 pb-3 text-[16px] data-active:text-green"
             >
               Why it works
             </TabsTrigger>
@@ -67,10 +67,10 @@ export function SupplementFacts() {
                 <tbody>
                   {ingredients.map((ing) => (
                     <tr key={ing.name}>
-                      <td className="border-b border-hair py-3 text-[15px] text-ink">
+                      <td className="border-b border-hair py-3 text-[16px] text-ink">
                         {ing.name}
                       </td>
-                      <td className="border-b border-hair py-3 text-right text-[15px] font-medium text-ink">
+                      <td className="border-b border-hair py-3 text-right text-[16px] font-medium text-ink">
                         {ing.dose}
                       </td>
                     </tr>
@@ -105,7 +105,7 @@ export function SupplementFacts() {
                   <span className="font-serif text-[28px] leading-none text-green">
                     {step.n}
                   </span>
-                  <h3 className="mt-3 text-[15.5px] font-semibold text-ink">
+                  <h3 className="mt-3 text-[16px] font-semibold text-ink">
                     {step.title}
                   </h3>
                   <p className="mt-1.5 text-[14.5px] leading-[1.5] text-ink-2">

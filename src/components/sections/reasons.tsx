@@ -30,7 +30,7 @@ export function Reasons() {
               <h3 className="mt-4 font-sans text-[17px] font-semibold text-ink">
                 {r.title}
               </h3>
-              <p className="mt-2 text-[15px] leading-[1.55] text-ink-2">
+              <p className="mt-2 text-[16px] leading-[1.55] text-ink-2">
                 {r.body}
               </p>
             </Card>

@@ -113,9 +113,9 @@ function GuideSection({
 }) {
   return (
     <section id={id} className="scroll-mt-24 border-t border-hair py-12 first:border-t-0">
-      <Eyebrow tone="green">
+      <h2 className="text-[12px] font-semibold uppercase tracking-[0.18em] text-green">
         {no} · {title}
-      </Eyebrow>
+      </h2>
       {intro && <Lede className="mt-3">{intro}</Lede>}
       <div className="mt-7">{children}</div>
     </section>

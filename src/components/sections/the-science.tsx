@@ -48,10 +48,10 @@ export function TheScience() {
                     {step.n}
                   </span>
                   <div>
-                    <div className="text-[15.5px] font-semibold text-ink">
+                    <div className="text-[16px] font-semibold text-ink">
                       {step.title}
                     </div>
-                    <p className="mt-0.5 text-[15px] text-ink-2">{step.body}</p>
+                    <p className="mt-0.5 text-[16px] text-ink-2">{step.body}</p>
                   </div>
                 </div>
               ))}
@@ -75,10 +75,10 @@ export function TheScience() {
               <tbody>
                 {ingredients.map((ing) => (
                   <tr key={ing.name}>
-                    <td className="border-b border-hair-soft py-3.5 text-[15px] font-medium text-ink">
+                    <td className="border-b border-hair-soft py-3.5 text-[16px] font-medium text-ink">
                       {ing.name}
                     </td>
-                    <td className="border-b border-hair-soft py-3.5 text-right text-[15px] text-berry">
+                    <td className="border-b border-hair-soft py-3.5 text-right text-[16px] text-berry">
                       {ing.dose}
                     </td>
                   </tr>

@@ -19,7 +19,7 @@
   --color-surface: #ffffff; /* cards */
   --color-ink: #181c19; /* primary text */
   --color-ink-2: #4e564d; /* body / secondary */
-  --color-ink-3: #828a7d; /* muted labels, eyebrows */
+  --color-ink-3: #5f665c; /* muted labels, eyebrows (AA: ~5:1 on bone) */
 
   --color-green: #33513f; /* the clinical lead: CTAs, marks, numerals */
   --color-green-deep: #243b2d; /* hover / dark green */
@@ -31,7 +31,7 @@
 
   --color-hair: #e1e5db; /* hairlines, borders, dividers */
   --color-hair-soft: #eaeee3;
-  --color-warn: #b0746c; /* muted clay for "never" pills */
+  --color-warn: #985a52; /* muted clay for "never" pills (AA: ~5.4:1 on white) */
 
   /* ---- shadcn semantic tokens mapped to the brand ---- */
   --color-background: var(--background);
@@ -119,6 +119,14 @@
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
     }
   }
 }

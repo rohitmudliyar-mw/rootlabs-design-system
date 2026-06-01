@@ -35,7 +35,7 @@ export function DocsHeader() {
                 key={t.href}
                 href={t.href}
                 className={cn(
-                  "rounded-full px-3 py-1.5 text-[14px] font-medium transition-colors",
+                  "inline-flex min-h-[44px] items-center rounded-full px-3 text-[14px] font-medium transition-colors",
                   active
                     ? "bg-green-mist text-green"
                     : "text-ink-2 hover:text-green"
