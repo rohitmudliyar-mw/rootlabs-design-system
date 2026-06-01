@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowUpRight, Check, X } from "lucide-react";
+import { ArrowRight, Check, X } from "lucide-react";
 
 import {
   Container,
@@ -32,6 +32,8 @@ import {
   TabsContent,
 } from "@/components/ui/tabs";
 import { PhoneFrame } from "@/components/guide/phone-frame";
+import { DocsHeader } from "@/components/guide/docs-header";
+import { DocsFooter } from "@/components/guide/docs-footer";
 
 /* ---------- data ---------- */
 
@@ -95,22 +97,6 @@ const nav = [
 
 /* ---------- helpers ---------- */
 
-function RootLabsWordmark() {
-  return (
-    <span className="flex items-center gap-2.5">
-      <span
-        className="grid size-8 place-items-center rounded-[9px] bg-green font-serif text-[18px] font-medium text-white"
-        aria-hidden
-      >
-        R
-      </span>
-      <span className="font-serif text-[20px] font-[460] tracking-[-0.01em] text-ink">
-        Root Labs
-      </span>
-    </span>
-  );
-}
-
 function GuideSection({
   id,
   no,
@@ -140,26 +126,7 @@ function GuideSection({
 export default function DesignGuide() {
   return (
     <div className="min-h-screen bg-bone">
-      {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-hair bg-bone/85 backdrop-blur-md backdrop-saturate-150">
-        <Container size="wide" className="flex h-16 items-center justify-between">
-          <div className="flex items-center gap-3">
-            <RootLabsWordmark />
-            <span className="hidden text-[11px] uppercase tracking-[0.16em] text-ink-3 sm:inline">
-              Design System · v1.0
-            </span>
-          </div>
-          <nav className="flex items-center gap-2">
-            <a
-              href="/ashwamag-brand-guide.html"
-              target="_blank"
-              className="text-[14px] font-medium text-ink-2 hover:text-green"
-            >
-              Brand guide
-            </a>
-          </nav>
-        </Container>
-      </header>
+      <DocsHeader />
 
       {/* Hero */}
       <Container size="wide" className="py-16 lg:py-24">
@@ -575,22 +542,7 @@ export default function DesignGuide() {
         </div>
       </Container>
 
-      {/* Footer */}
-      <footer className="border-t border-hair bg-bone">
-        <Container size="wide" className="flex flex-col gap-4 py-10 sm:flex-row sm:items-center sm:justify-between">
-          <RootLabsWordmark />
-          <div className="flex flex-wrap items-center gap-5 text-[13px] text-ink-3">
-            <a
-              href="/ashwamag-brand-guide.html"
-              target="_blank"
-              className="inline-flex items-center gap-1 hover:text-green"
-            >
-              Full brand guide <ArrowUpRight className="size-3.5" />
-            </a>
-            <span>Root Labs · Design System v1.0</span>
-          </div>
-        </Container>
-      </footer>
+      <DocsFooter />
     </div>
   );
 }
