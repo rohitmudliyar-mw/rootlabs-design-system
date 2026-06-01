@@ -27,7 +27,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-hair bg-bone/80 backdrop-blur-md backdrop-saturate-150">
       <div className="mx-auto flex h-16 max-w-[1280px] items-center justify-between px-5 sm:px-8 lg:px-12">
         <Link href="/" aria-label="Root Labs home">
-          <BrandLogo surface="light" height={30} priority />
+          <BrandLogo surface="light" height={30} />
         </Link>
 
         {/* Desktop nav */}

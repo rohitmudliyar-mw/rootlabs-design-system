@@ -1,10 +1,16 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
-import { Container, Display, Lede, Stars, Pill } from "@/components/brand";
+import {
+  Container,
+  Display,
+  Lede,
+  Stars,
+  Pill,
+  ImageFrame,
+} from "@/components/brand";
 import { Button } from "@/components/ui/button";
-import { product } from "@/lib/content";
+import { product, productImages } from "@/lib/content";
 
 export function Hero() {
   return (
@@ -53,17 +59,14 @@ export function Hero() {
 
         {/* Visual */}
         <div className="order-1 lg:order-2">
-          <div className="mx-auto max-w-[440px] overflow-hidden rounded-xl border border-hair">
-            <Image
-              src="/product/pouch-hero.png"
-              alt="Root Labs Liposomal Magnesium + Ashwagandha gummies pouch"
-              width={1254}
-              height={1254}
-              priority
-              sizes="(min-width: 1024px) 440px, 100vw"
-              className="h-auto w-full"
-            />
-          </div>
+          <ImageFrame
+            src={productImages[0].src}
+            alt={productImages[0].alt}
+            ratio="square"
+            priority
+            sizes="(min-width: 1024px) 440px, 100vw"
+            className="mx-auto max-w-[440px]"
+          />
         </div>
       </Container>
     </section>

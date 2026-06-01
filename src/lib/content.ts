@@ -152,6 +152,21 @@ export const certifications = [
   "Non-GMO",
 ];
 
+export const productImages = [
+  {
+    src: "/product/pouch-hero.png",
+    alt: "Root Labs Liposomal Magnesium + Ashwagandha gummies pouch",
+  },
+  {
+    src: "/product/gummies-bowl.jpg",
+    alt: "Berry gummies falling into a glass bowl",
+  },
+  {
+    src: "/product/lifestyle-man.jpg",
+    alt: "A man holding a single Root Labs gummy",
+  },
+];
+
 export const benefits = [
   "Restores deep sleep — no grogginess",
   "~17% better-absorbed magnesium",

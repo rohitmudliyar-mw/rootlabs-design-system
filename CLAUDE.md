@@ -89,18 +89,18 @@ See `WORKFLOW.md` for the full version. The system is DRY, so changes propagate:
   relevant, a snippet on `src/app/installation/page.tsx`.
 - Add a **folder/route** → update the structure notes above.
 
-**Ship everything in one command:**
+**Ship:** autodeploy is on, so a plain push deploys to prod. Or run:
 
 ```bash
-npm run ship "what you changed"   # build → commit → push → deploy to prod → re-alias domain
+npm run ship "what you changed"   # build → commit → push (Actions deploys)
 ```
 
-If the build fails, nothing is committed or deployed. CI (`.github/workflows/ci.yml`) also
-builds on every push/PR.
+If the build fails, nothing is pushed.
 
 ## Deploy
 
-`npm run ship "..."` is the normal path. Manual equivalent: `npm run build`, commit, push,
-then `npm run deploy` (`vercel deploy --prod --yes`). Vercel project: `rootlabs-design-system`
-(team `rohits-projects-e06afadc`). For hands-free deploy on push, connect the Vercel Git
-integration in the dashboard (Settings → Git).
+Autodeploy: every push to `main` runs `.github/workflows/deploy.yml` (build → deploy to
+production → re-alias `rootlabs-design-system.vercel.app`), gated on the `VERCEL_TOKEN`
+repo secret (set). `.github/workflows/ci.yml` builds on every push/PR. Manual fallback:
+`npm run deploy` (`vercel deploy --prod --yes`). Vercel project: `rootlabs-design-system`
+(team `rohits-projects-e06afadc`).

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ArrowRight, Check, X } from "lucide-react";
 
 import {
@@ -14,6 +13,7 @@ import {
   Pill,
   Stars,
   BrandLogo,
+  ImageFrame,
 } from "@/components/brand";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -34,6 +34,7 @@ import {
 import { PhoneFrame } from "@/components/guide/phone-frame";
 import { DocsHeader } from "@/components/guide/docs-header";
 import { DocsFooter } from "@/components/guide/docs-footer";
+import { productImages } from "@/lib/content";
 
 /* ---------- data ---------- */
 
@@ -517,23 +518,14 @@ export default function DesignGuide() {
               </div>
               <Label className="mt-7 block">Imagery — real, clinical, calm</Label>
               <div className="mt-3 grid gap-4 sm:grid-cols-3">
-                {[
-                  { src: "/product/pouch-hero.png", alt: "Product pouch" },
-                  { src: "/product/gummies-bowl.jpg", alt: "Berry gummies" },
-                  { src: "/product/lifestyle-man.jpg", alt: "Lifestyle" },
-                ].map((img) => (
-                  <div
+                {productImages.map((img) => (
+                  <ImageFrame
                     key={img.src}
-                    className="relative aspect-[4/5] overflow-hidden rounded-xl border border-hair bg-bone-2"
-                  >
-                    <Image
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      sizes="(min-width:640px) 33vw, 100vw"
-                      className="object-cover"
-                    />
-                  </div>
+                    src={img.src}
+                    alt={img.alt}
+                    ratio="portrait"
+                    sizes="(min-width:640px) 33vw, 100vw"
+                  />
                 ))}
               </div>
             </GuideSection>

@@ -248,13 +248,13 @@ text-berry   border-hair   font-serif   font-sans`}
 
             <Step no="09" title="Deploy">
               <p className="text-[16px] leading-[1.6] text-ink-2">
-                The site is hosted on Vercel. To publish changes, push to GitHub
-                and deploy:
+                The site is hosted on Vercel with autodeploy on. Just push to
+                GitHub — a GitHub Action builds and deploys to production
+                automatically (~1 min):
               </p>
               <CodeBlock label="Terminal" className="mt-4">
                 {`git add -A && git commit -m "your change"
-git push
-npx vercel deploy --prod --yes`}
+git push`}
               </CodeBlock>
               <Card tone="mist" className="mt-4">
                 <Label>Live</Label>
@@ -345,15 +345,15 @@ npx vercel deploy --prod --yes`}
                 <code className="rounded bg-bone-2 px-1.5 py-0.5 text-[13px]">
                   DESIGN.md
                 </code>
-                . Then ship everything — build, commit, push, and deploy — in one
-                command:
+                . Then build, commit, and push in one command — autodeploy takes
+                it to production:
               </p>
               <CodeBlock label="Terminal" className="mt-4">
                 npm run ship &quot;describe what you changed&quot;
               </CodeBlock>
               <p className="mt-3 text-[14px] text-ink-3">
-                If the build fails, nothing is committed or deployed. CI also
-                builds on every push. Full details in{" "}
+                If the build fails, nothing is pushed. CI also builds on every
+                push. Full details in{" "}
                 <code className="rounded bg-bone-2 px-1.5 py-0.5 text-[13px]">
                   WORKFLOW.md
                 </code>

@@ -23,11 +23,11 @@ export function BrandLogo({
   priority?: boolean;
   className?: string;
 }) {
-  const a = ASSETS[surface];
-  const width = Math.round((a.w / a.h) * height);
+  const asset = ASSETS[surface];
+  const width = Math.round((asset.w / asset.h) * height);
   return (
     <Image
-      src={a.src}
+      src={asset.src}
       alt="Root Labs"
       width={width}
       height={height}

@@ -11,6 +11,5 @@ export {
 export { Card, Callout } from "./card";
 export { Pill } from "./pill";
 export { Stars } from "./stars";
-export { Logo } from "./logo";
 export { BrandLogo } from "./brand-logo";
-export { ProductVisual } from "./product-visual";
+export { ImageFrame } from "./image-frame";
