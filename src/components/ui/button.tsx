@@ -13,9 +13,9 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        // The clinical lead — green pill, white text
+        // The clinical lead, green pill, white text
         default: "bg-green text-white hover:bg-green-deep",
-        // Secondary action — outlined ink
+        // Secondary action, outlined ink
         ghost: "border border-ink/85 text-ink hover:bg-ink hover:text-white",
         // Quiet tonal action
         soft: "bg-green-mist text-green hover:bg-[#dde8d4]",

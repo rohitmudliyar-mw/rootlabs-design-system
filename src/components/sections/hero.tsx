@@ -38,7 +38,7 @@ export function Hero() {
 
           <Lede className="mt-6">
             A doctor-led sleep formula built for women 35+. We restore the deep
-            sleep stress takes away — with the best-absorbed magnesium, KSM-66
+            sleep stress takes away, with the best-absorbed magnesium, KSM-66
             ashwagandha, and no melatonin.
           </Lede>
 

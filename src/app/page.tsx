@@ -196,7 +196,7 @@ export default function DesignGuide() {
 
           {/* Content */}
           <div>
-            {/* BRAND — STRATEGY */}
+            {/* BRAND, STRATEGY */}
             <GuideSection
               id="strategy"
               no="01"
@@ -217,20 +217,20 @@ export default function DesignGuide() {
                   <Label>Mission</Label>
                   <p className="mt-2.5 text-[15px] text-ink-2">
                     Help women 35+ get deep, continuous sleep by fixing the
-                    chemistry behind 3 a.m. wakeups — not by sedating them.
+                    chemistry behind 3 a.m. wakeups, not by sedating them.
                   </p>
                 </Card>
                 <Card>
                   <Label>Archetype</Label>
                   <p className="mt-2.5 text-[15px] text-ink-2">
-                    The Sage with a Caregiver heart — a trusted clinician who has
+                    The Sage with a Caregiver heart, a trusted clinician who has
                     read every study but will not lecture you.
                   </p>
                 </Card>
               </div>
             </GuideSection>
 
-            {/* BRAND — VOICE */}
+            {/* BRAND, VOICE */}
             <GuideSection
               id="voice"
               no="02"
@@ -267,9 +267,42 @@ export default function DesignGuide() {
                   </ul>
                 </div>
               </div>
+
+              <Callout className="mt-4">
+                <Label>Tone of voice</Label>
+                <p className="mt-3 text-[16px] leading-[1.6] text-ink">
+                  Write like a person, not a brand. Warm, plain, and human. Short
+                  sentences. Say it the way you&apos;d say it to a friend who
+                  reads labels.
+                </p>
+                <div className="mt-5 grid gap-5 sm:grid-cols-2">
+                  <div>
+                    <Pill tone="yes">Do</Pill>
+                    <ul className="mt-3 space-y-2 text-[15px] text-ink-2">
+                      <li>Use commas, periods, and parentheses for pauses.</li>
+                      <li>Plain words a tired reader takes in at a glance.</li>
+                      <li>
+                        Be specific and honest: name the dose, the study, the
+                        timeline.
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <Pill tone="no">Don&apos;t</Pill>
+                    <ul className="mt-3 space-y-2 text-[15px] text-ink-2">
+                      <li>No em dashes. Rewrite the sentence instead.</li>
+                      <li>
+                        No AI filler: &ldquo;elevate&rdquo;, &ldquo;unlock&rdquo;,
+                        &ldquo;seamless&rdquo;, &ldquo;delve&rdquo;.
+                      </li>
+                      <li>No hype, buzzwords, or copy that sounds machine-written.</li>
+                    </ul>
+                  </div>
+                </div>
+              </Callout>
             </GuideSection>
 
-            {/* FOUNDATIONS — COLOR */}
+            {/* FOUNDATIONS, COLOR */}
             <GuideSection
               id="color"
               no="03"
@@ -297,7 +330,7 @@ export default function DesignGuide() {
               </div>
             </GuideSection>
 
-            {/* FOUNDATIONS — TYPE */}
+            {/* FOUNDATIONS, TYPE */}
             <GuideSection
               id="type"
               no="04"
@@ -324,7 +357,7 @@ export default function DesignGuide() {
               </div>
             </GuideSection>
 
-            {/* FOUNDATIONS — RADIUS */}
+            {/* FOUNDATIONS, RADIUS */}
             <GuideSection
               id="radius"
               no="05"
@@ -347,7 +380,7 @@ export default function DesignGuide() {
               </div>
             </GuideSection>
 
-            {/* COMPONENTS — BUTTONS */}
+            {/* COMPONENTS, BUTTONS */}
             <GuideSection
               id="buttons"
               no="06"
@@ -372,7 +405,7 @@ export default function DesignGuide() {
               </div>
             </GuideSection>
 
-            {/* COMPONENTS — PILLS */}
+            {/* COMPONENTS, PILLS */}
             <GuideSection id="pills" no="07" title="Pills & ratings">
               <div className="space-y-5 rounded-xl border border-hair bg-surface p-6">
                 <div className="flex flex-wrap gap-2">
@@ -390,7 +423,7 @@ export default function DesignGuide() {
               </div>
             </GuideSection>
 
-            {/* COMPONENTS — CARDS */}
+            {/* COMPONENTS, CARDS */}
             <GuideSection id="cards" no="08" title="Cards & callouts">
               <div className="grid gap-4 lg:grid-cols-3">
                 <Card>
@@ -419,7 +452,7 @@ export default function DesignGuide() {
               </div>
             </GuideSection>
 
-            {/* COMPONENTS — FORMS */}
+            {/* COMPONENTS, FORMS */}
             <GuideSection id="forms" no="09" title="Form controls">
               <div className="grid max-w-md gap-6 rounded-xl border border-hair bg-surface p-6">
                 <div className="grid gap-2">
@@ -444,7 +477,7 @@ export default function DesignGuide() {
               </div>
             </GuideSection>
 
-            {/* COMPONENTS — ACCORDION */}
+            {/* COMPONENTS, ACCORDION */}
             <GuideSection id="accordion" no="10" title="Accordion">
               <div className="max-w-2xl rounded-xl border border-hair bg-surface px-6">
                 <Accordion>
@@ -455,7 +488,7 @@ export default function DesignGuide() {
                     ],
                     [
                       "Will it make me groggy?",
-                      "No melatonin, no sedatives — you wake rested, not knocked out.",
+                      "No melatonin, no sedatives, you wake rested, not knocked out.",
                     ],
                   ].map(([q, a], i) => (
                     <AccordionItem
@@ -475,7 +508,7 @@ export default function DesignGuide() {
               </div>
             </GuideSection>
 
-            {/* COMPONENTS — TABS */}
+            {/* COMPONENTS, TABS */}
             <GuideSection id="tabs" no="11" title="Tabs">
               <div className="max-w-2xl rounded-xl border border-hair bg-surface p-6">
                 <Tabs defaultValue="a">
@@ -506,7 +539,7 @@ export default function DesignGuide() {
               </div>
             </GuideSection>
 
-            {/* COMPONENTS — LOGO & IMAGERY */}
+            {/* COMPONENTS, LOGO & IMAGERY */}
             <GuideSection id="logo" no="12" title="Logo & imagery">
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="grid place-items-center rounded-xl border border-hair bg-surface p-12">
@@ -516,7 +549,7 @@ export default function DesignGuide() {
                   <BrandLogo surface="dark" height={72} />
                 </div>
               </div>
-              <Label className="mt-7 block">Imagery — real, clinical, calm</Label>
+              <Label className="mt-7 block">Imagery, real, clinical, calm</Label>
               <div className="mt-3 grid gap-4 sm:grid-cols-3">
                 {productImages.map((img) => (
                   <ImageFrame
@@ -535,7 +568,7 @@ export default function DesignGuide() {
               id="examples"
               no="13"
               title="Example layouts"
-              intro="The components composed into two real, mobile-first pages. Shown live below — tap to open the full page."
+              intro="The components composed into two real, mobile-first pages. Shown live below, tap to open the full page."
             >
               <div className="grid justify-items-center gap-12 sm:grid-cols-2">
                 <PhoneFrame

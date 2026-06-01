@@ -17,7 +17,7 @@ export function Reasons() {
           The mechanism is the message.
         </SectionTitle>
         <Lede className="mt-4">
-          We compete on how the body absorbs and uses what&apos;s inside — not on
+          We compete on how the body absorbs and uses what&apos;s inside, not on
           a single sedating pill. Four reasons to believe.
         </Lede>
 

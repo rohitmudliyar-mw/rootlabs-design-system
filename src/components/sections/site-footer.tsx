@@ -26,7 +26,7 @@ export function SiteFooter() {
             <BrandLogo surface="light" height={34} />
             <p className="mt-4 max-w-[32ch] text-[14px] leading-[1.55] text-ink-2">
               Doctor-led sleep science. We restore the deep sleep stress takes
-              away — we never sedate.
+              away. We never sedate.
             </p>
           </div>
           {groups.map((g) => (

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 /**
- * ImageFrame — a fixed-ratio, cover-cropped image in the brand card frame
+ * ImageFrame, a fixed-ratio, cover-cropped image in the brand card frame
  * (hairline border, 18px radius). The shared wrapper for product photography.
  */
 const RATIOS = {

@@ -1,5 +1,5 @@
 ---
-name: Root Labs — AshwaMag
+name: Root Labs, AshwaMag
 repo: https://github.com/rohitmudliyar-mw/rootlabs-design-system
 live: https://rootlabs-design-system.vercel.app
 colors:
@@ -130,7 +130,7 @@ components:
 ## Brand & Style
 
 Root Labs is a doctor-led nutrition house. This design system is demonstrated with
-its lead brand, **AshwaMag** — a liposomal magnesium + ashwagandha sleep gummy whose
+its lead brand, **AshwaMag**, a liposomal magnesium + ashwagandha sleep gummy whose
 promise is _"Rested, not sedated."_
 
 The style is **clinical, calm, and editorial**. It reads like a trusted clinician who
@@ -144,17 +144,17 @@ fear, and sedative tropes in both copy and imagery.
 
 ## Colors
 
-The palette is led by one deep clinical **green** (`#33513f`) — the lead color for CTAs,
+The palette is led by one deep clinical **green** (`#33513f`), the lead color for CTAs,
 marks, numerals, and proof. A cool **bone** canvas (`#f1f3ee`) and **ink** charcoal text
 (`#181c19`) carry most surfaces.
 
-- **Green** — the lead. Primary actions, active states, key numerals, and proof points.
-- **Green mist / green highlighter** — soft tints for callouts; the highlighter (`#cde3b0`)
+- **Green**, the lead. Primary actions, active states, key numerals, and proof points.
+- **Green mist / green highlighter**, soft tints for callouts; the highlighter (`#cde3b0`)
   marks exactly one phrase at a time and is never a background fill.
-- **Berry** (`#7c2d43`) — the *product* color. Reserved for the gummy, the science, and the
+- **Berry** (`#7c2d43`), the *product* color. Reserved for the gummy, the science, and the
   "Mag" in the wordmark. Keep it rare so it stays meaningful.
-- **Ink / Ink-2 / Ink-3** — primary, secondary, and muted text on light surfaces.
-- **Hair** (`#e1e5db`) — hairline borders and dividers. Borders are thin and quiet.
+- **Ink / Ink-2 / Ink-3**, primary, secondary, and muted text on light surfaces.
+- **Hair** (`#e1e5db`), hairline borders and dividers. Borders are thin and quiet.
 
 White-on-green and ink-on-bone both pass WCAG AA. Never put green-highlighter text on bone.
 
@@ -162,7 +162,7 @@ White-on-green and ink-on-bone both pass WCAG AA. Never put green-highlighter te
 
 Two families. **Fraunces** (an optical serif with warmth and authority) is used large,
 light, and sparingly for display and section headlines. **Inter** handles all body, UI,
-and labels — clean, neutral, clinical.
+and labels, clean, neutral, clinical.
 
 - **Display / Section titles:** Fraunces, light weights (~380–400), tight tracking. Hierarchy
   comes from size, not heavy weight.
@@ -173,7 +173,7 @@ Body text never drops below 16px on web.
 
 ## Layout & Spacing
 
-**Mobile-first, always** — design for the small screen first, then enhance upward. Spacing
+**Mobile-first, always**, design for the small screen first, then enhance upward. Spacing
 follows a 4px rhythm; sections breathe with large vertical separation (`section` = 96px).
 
 - **Containers:** centered with a max width (~1120px for content, ~760px for prose), with a
@@ -196,7 +196,7 @@ as restraint.
 
 The shape language is **soft but clinical**.
 
-- **Buttons:** full pills (`rounded-full`) — friendly and unmistakably tappable.
+- **Buttons:** full pills (`rounded-full`), friendly and unmistakably tappable.
 - **Cards & callouts:** an 18px radius (`rounded.card`) with one hairline border.
 - **Inputs:** a smaller `DEFAULT` (12px) radius to stay precise.
 - **Icons:** quiet line icons (lucide) at 16–20px; rounded caps to harmonize.
@@ -205,7 +205,7 @@ The shape language is **soft but clinical**.
 
 ### Buttons
 
-`button-primary` is the green pill with white text — the clinical lead CTA; it darkens to
+`button-primary` is the green pill with white text, the clinical lead CTA; it darkens to
 `green-deep` on hover. `button-ghost` is the outlined secondary action. Motion is calm:
 ~150–250ms ease, no bounce.
 
@@ -217,7 +217,7 @@ promise. Never nest cards inside cards.
 
 ### Pills & Inputs
 
-`pill` is an uppercase tag where color carries meaning — green for proof/affirmation,
+`pill` is an uppercase tag where color carries meaning, green for proof/affirmation,
 `pill-no` (clay `warn`) for the anti-pattern column. `input-field` uses the quiet surface
 with a hairline border and `DEFAULT` radius.
 
@@ -235,10 +235,12 @@ text must read fine in plain black.
 - Keep berry rare and tied to the product.
 - Cite the dose and the study next to any claim.
 - Design mobile-first and meet WCAG AA.
+- Write humane, plain copy. Short sentences, the way you'd talk to a friend. Use commas, periods, and parentheses for pauses.
 
 **Don't**
 - Don't use hype, fear, or "knock-you-out"/sedative/miracle language.
 - Don't use the highlighter as a background or on more than one phrase.
-- Don't spread berry across the UI — it stops meaning anything.
+- Don't spread berry across the UI, it stops meaning anything.
 - Don't add heavy shadows, gradients, or glow; restraint is the brand.
 - Don't rely on color alone to convey meaning.
+- Don't use em dashes. Don't use AI filler ("elevate", "unlock", "seamless", "delve") or copy that reads machine-written.

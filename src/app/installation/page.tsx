@@ -15,7 +15,7 @@ import { DocsFooter } from "@/components/guide/docs-footer";
 import { CodeBlock } from "@/components/guide/code-block";
 
 export const metadata = {
-  title: "Installation — Root Labs Design System",
+  title: "Installation · Root Labs Design System",
   description:
     "How to clone, run, and build with the Root Labs design system.",
 };
@@ -235,7 +235,7 @@ text-berry   border-hair   font-serif   font-sans`}
 
             <Step no="08" title="Add more components">
               <p className="text-[16px] leading-[1.6] text-ink-2">
-                Pull any shadcn/ui primitive into the project — it lands in{" "}
+                Pull any shadcn/ui primitive into the project, it lands in{" "}
                 <code className="rounded bg-bone-2 px-1.5 py-0.5 text-[13px]">
                   src/components/ui/
                 </code>{" "}
@@ -249,7 +249,7 @@ text-berry   border-hair   font-serif   font-sans`}
             <Step no="09" title="Deploy">
               <p className="text-[16px] leading-[1.6] text-ink-2">
                 The site is hosted on Vercel with autodeploy on. Just push to
-                GitHub — a GitHub Action builds and deploys to production
+                GitHub, a GitHub Action builds and deploys to production
                 automatically (~1 min):
               </p>
               <CodeBlock label="Terminal" className="mt-4">
@@ -303,7 +303,7 @@ git push`}
                     </code>
                   </div>
                   <p className="mt-2 text-[14px] text-ink-2">
-                    Project guide for Claude Code — stack, structure, commands,
+                    Project guide for Claude Code, stack, structure, commands,
                     and the rules to follow when editing this repo.
                   </p>
                 </Card>
@@ -322,7 +322,7 @@ git push`}
 
             <Step no="11" title="Update & ship">
               <p className="text-[16px] leading-[1.6] text-ink-2">
-                The system is DRY, so most changes propagate on their own — edit
+                The system is DRY, so most changes propagate on their own, edit
                 the source once and every page follows.
               </p>
               <div className="mt-4 grid gap-3 sm:grid-cols-3">
@@ -345,7 +345,7 @@ git push`}
                 <code className="rounded bg-bone-2 px-1.5 py-0.5 text-[13px]">
                   DESIGN.md
                 </code>
-                . Then build, commit, and push in one command — autodeploy takes
+                . Then build, commit, and push in one command, autodeploy takes
                 it to production:
               </p>
               <CodeBlock label="Terminal" className="mt-4">

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 /**
- * BrandLogo — the real Root Labs mark.
+ * BrandLogo, the real Root Labs mark.
  * `surface="light"` uses the green mark (for bone/white backgrounds);
  * `surface="dark"` uses the cream mark (for ink backgrounds).
  */

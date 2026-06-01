@@ -3,7 +3,7 @@
 @import "shadcn/tailwind.css";
 
 /* ============================================================
-   ASHWAMAG — DESIGN SYSTEM TOKENS
+   ASHWAMAG, DESIGN SYSTEM TOKENS
    Lead color: clinical green. Berry = product accent.
    Mirrors docs/ashwamag-brand-guide.html
    ============================================================ */
@@ -24,7 +24,7 @@
   --color-green: #33513f; /* the clinical lead: CTAs, marks, numerals */
   --color-green-deep: #243b2d; /* hover / dark green */
   --color-green-mist: #e9efe6; /* soft tint backgrounds */
-  --color-green-hl: #cde3b0; /* the highlighter — one word at a time */
+  --color-green-hl: #cde3b0; /* the highlighter, one word at a time */
 
   --color-berry: #7c2d43; /* product accent: the gummy, the science, "Mag" */
   --color-berry-mist: #f4e6e3;
@@ -58,7 +58,7 @@
   --radius-sm: calc(var(--radius) * 0.66);
   --radius-md: calc(var(--radius) * 0.83);
   --radius-lg: var(--radius);
-  --radius-xl: 1.125rem; /* 18px — the brand card radius */
+  --radius-xl: 1.125rem; /* 18px, the brand card radius */
   --radius-2xl: 1.5rem;
   --radius-3xl: 2rem;
 }
@@ -127,7 +127,7 @@
    Brand utilities
    ============================================================ */
 
-/* The highlighter — used on exactly one phrase at a time.
+/* The highlighter, used on exactly one phrase at a time.
    A green marker stroke sitting on the baseline, never a full fill. */
 .brand-highlight {
   background: linear-gradient(

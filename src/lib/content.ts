@@ -28,7 +28,7 @@ export const reasons = [
   },
   {
     title: "No sugar",
-    body: "Sweetened with chicory root fibre, which also adds 8.76g of fibre — about 25% of your daily need.",
+    body: "Sweetened with chicory root fibre, which also adds 8.76g of fibre, about 25% of your daily need.",
   },
   {
     title: "7× certified",
@@ -82,9 +82,9 @@ export const comparison = {
   us: [
     "Liposomal magnesium glycinate, ~17% better absorbed",
     "KSM-66 ashwagandha at a clinical 200mg dose",
-    "No added sugar — sweetened with chicory root fibre",
+    "No added sugar, sweetened with chicory root fibre",
     "7× certified, third-party batch tested",
-    "Restores deep sleep — no morning grogginess",
+    "Restores deep sleep, no morning grogginess",
   ],
   them: [
     "Cheap magnesium oxide that passes through you",
@@ -98,7 +98,7 @@ export const comparison = {
 export const reviews = [
   {
     quote:
-      "Finally an explanation that makes sense. I sleep through the night and wake up clear — no hangover.",
+      "Finally an explanation that makes sense. I sleep through the night and wake up clear, no hangover.",
     name: "Dana R.",
     meta: "Verified buyer · 41",
     rating: 5,
@@ -122,7 +122,7 @@ export const reviews = [
 export const faqs = [
   {
     q: "When will I feel a difference?",
-    a: "Be honest with yourself about the curve — meaningful shifts in deep sleep typically land between days 18 and 28 as magnesium reserves replenish. This is restoration, not a sedative hit.",
+    a: "Be honest with yourself about the curve. Meaningful shifts in deep sleep typically land between days 18 and 28 as magnesium reserves replenish. This is restoration, not a sedative hit.",
   },
   {
     q: "Will it make me groggy in the morning?",
@@ -168,7 +168,7 @@ export const productImages = [
 ];
 
 export const benefits = [
-  "Restores deep sleep — no grogginess",
+  "Restores deep sleep, no grogginess",
   "~17% better-absorbed magnesium",
   "Calms the 3am cortisol surge",
   "No melatonin, no added sugar",

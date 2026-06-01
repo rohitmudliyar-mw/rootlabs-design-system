@@ -1,4 +1,4 @@
-# Workflow — update & ship
+# Workflow, update & ship
 
 How a change to the guidelines or a component flows through to every page, the
 docs, and production. The system is built so **most things update themselves**.
@@ -7,7 +7,7 @@ docs, and production. The system is built so **most things update themselves**.
 
 | You change… | Edit this one place | What updates automatically |
 | --- | --- | --- |
-| **Brand tokens** (color, radius, fonts) | `src/app/globals.css` | Every component and every page — the guide, installation page, landing, and product — because they all use the same Tailwind token classes (`bg-green`, `text-ink`, …). |
+| **Brand tokens** (color, radius, fonts) | `src/app/globals.css` | Every component and every page, the guide, installation page, landing, and product, because they all use the same Tailwind token classes (`bg-green`, `text-ink`, …). |
 | **Copy / product data** (prices, reviews, FAQ, ingredients) | `src/lib/content.ts` | The landing page, the product page, and any guide section that reads from it. |
 | **A component** (e.g. `Button`, `Card`, `BuyBox`) | `src/components/**` | Every page that imports it, instantly. |
 | **Docs site nav/chrome** | `src/components/guide/docs-header.tsx` / `docs-footer.tsx` | Both the guide and the installation page (they share these). |
@@ -20,10 +20,10 @@ docs, and production. The system is built so **most things update themselves**.
 
 A couple of things are *documentation about* the system, so they don't auto-derive:
 
-1. **`DESIGN.md`** — if you change a token value in `globals.css` (or add a
+1. **`DESIGN.md`**, if you change a token value in `globals.css` (or add a
    component), mirror it in the `DESIGN.md` front matter so AI tools stay accurate.
 2. **The guide's "Components" section** (`src/app/page.tsx`) and the
-   **installation snippets** — if you add a brand-new *type* of component, add a
+   **installation snippets**, if you add a brand-new *type* of component, add a
    showcase block for it. (Restyling an existing component needs no doc change.)
 
 If you add a folder or route, also update the structure notes in `CLAUDE.md`.
@@ -62,7 +62,7 @@ broken change shows a ❌ on GitHub before it reaches users. No setup required.
 
 Every push to `main` auto-deploys to production via
 `.github/workflows/deploy.yml` (build → deploy → re-alias the domain). It's enabled
-by the `VERCEL_TOKEN` repository secret — already set. To rotate it: create a new
+by the `VERCEL_TOKEN` repository secret, already set. To rotate it: create a new
 token at https://vercel.com/account/tokens, then
 `gh secret set VERCEL_TOKEN --repo rohitmudliyar-mw/rootlabs-design-system`.
 

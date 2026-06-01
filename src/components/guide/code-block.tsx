@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 /**
- * CodeBlock — a dark, monospace panel for commands and snippets.
+ * CodeBlock, a dark, monospace panel for commands and snippets.
  * `label` shows a quiet caption above the block (e.g. "Terminal").
  */
 export function CodeBlock({

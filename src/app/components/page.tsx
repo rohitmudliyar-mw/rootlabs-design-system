@@ -22,7 +22,7 @@ import { PropTable, type PropRow } from "@/components/guide/prop-table";
 import { productImages } from "@/lib/content";
 
 export const metadata = {
-  title: "Components — Root Labs Design System",
+  title: "Components · Root Labs Design System",
   description: "API reference for every component, with prop tables.",
 };
 
@@ -110,7 +110,7 @@ export default function ComponentsReference() {
         <Eyebrow tone="green">Documentation</Eyebrow>
         <Display className="mt-5 max-w-[14ch]">Components</Display>
         <Lede className="mt-5">
-          The API for every component in the system — props, types, defaults, and
+          The API for every component in the system, props, types, defaults, and
           a live example. Import brand atoms from{" "}
           <code className="rounded bg-bone-2 px-1.5 py-0.5 text-[13.5px]">
             @/components/brand
@@ -258,7 +258,7 @@ export default function ComponentsReference() {
               id="highlight"
               name="<Highlight>"
               extendsEl="<span>"
-              description="The green marker stroke. Wrap exactly one phrase at a time — it is a highlighter, never a fill."
+              description="The green marker stroke. Wrap exactly one phrase at a time, it is a highlighter, never a fill."
               example={
                 <p className="text-[18px] text-ink">
                   We restore <Highlight>deep sleep</Highlight>.
@@ -374,7 +374,7 @@ export default function ComponentsReference() {
               id="pill"
               name="<Pill>"
               extendsEl="<span>"
-              description="Small uppercase tag where color carries meaning — never decoration."
+              description="Small uppercase tag where color carries meaning, never decoration."
               example={
                 <div className="flex flex-wrap gap-2">
                   <Pill tone="green">#1 doctor-recommended</Pill>

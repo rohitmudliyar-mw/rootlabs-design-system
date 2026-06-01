@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 /**
- * PhoneFrame — shows a live page inside a mobile device mockup so the
+ * PhoneFrame, shows a live page inside a mobile device mockup so the
  * mobile-first layout is visible right inside the design guide.
  */
 export function PhoneFrame({

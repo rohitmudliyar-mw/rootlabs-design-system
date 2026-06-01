@@ -3,7 +3,7 @@ import { Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 /**
- * Stars — a rating display. Defaults to the brand green fill.
+ * Stars, a rating display. Defaults to the brand green fill.
  * Renders partial fill via a clipped overlay.
  */
 export function Stars({

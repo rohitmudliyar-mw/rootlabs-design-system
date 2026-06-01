@@ -7,7 +7,7 @@ import { Stars } from "@/components/brand";
 import { product } from "@/lib/content";
 
 /**
- * StickyBuyBar — appears on mobile after the user scrolls past the buy box,
+ * StickyBuyBar, appears on mobile after the user scrolls past the buy box,
  * keeping "add to cart" always one tap away. Hidden on desktop.
  */
 export function StickyBuyBar() {

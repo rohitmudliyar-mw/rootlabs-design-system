@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 /**
- * Card — the workhorse surface. 18px radius, single hairline border,
+ * Card, the workhorse surface. 18px radius, single hairline border,
  * almost-invisible shadow. Premium reads as restraint.
  */
 export function Card({
@@ -30,7 +30,7 @@ export function Card({
 }
 
 /**
- * Callout — a soft tinted panel for quotes and key statements.
+ * Callout, a soft tinted panel for quotes and key statements.
  */
 export function Callout({
   className,

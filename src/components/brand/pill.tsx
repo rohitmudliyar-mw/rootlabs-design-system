@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 /**
- * Pill — small uppercase tag. Used for certifications, "yes/no" markers,
+ * Pill, small uppercase tag. Used for certifications, "yes/no" markers,
  * and offer chips. Color carries meaning, never decoration.
  */
 export function Pill({

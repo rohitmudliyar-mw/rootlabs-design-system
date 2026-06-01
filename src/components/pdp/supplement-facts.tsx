@@ -90,7 +90,7 @@ export function SupplementFacts() {
               <p className="text-[16px] leading-[1.6] text-ink-2">
                 Take <span className="font-semibold text-ink">two gummies</span>{" "}
                 nightly, about 30 minutes before bed. Each bottle is a 30-day
-                supply. Be patient with the curve — meaningful shifts in deep
+                supply. Be patient with the curve. Meaningful shifts in deep
                 sleep typically land between days 18 and 28 as your magnesium
                 reserves replenish.
               </p>

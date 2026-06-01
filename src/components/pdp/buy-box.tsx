@@ -122,7 +122,7 @@ export function BuyBox() {
         </div>
 
         <Button size="lg" className="flex-1">
-          Add to cart — ${active.price * qty}
+          Add to cart, ${active.price * qty}
         </Button>
       </div>
 

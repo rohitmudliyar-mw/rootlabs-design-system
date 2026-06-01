@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 /**
- * Eyebrow — the small uppercase label that sits above a headline.
+ * Eyebrow, the small uppercase label that sits above a headline.
  * Use `tone="green"` for the clinical section marker.
  */
 export function Eyebrow({
@@ -22,7 +22,7 @@ export function Eyebrow({
 }
 
 /**
- * SectionNumber — "01 — Strategy" style clinical marker.
+ * SectionNumber, "01, Strategy" style clinical marker.
  */
 export function SectionNumber({
   className,
@@ -40,7 +40,7 @@ export function SectionNumber({
 }
 
 /**
- * Display — the big Fraunces hero headline. Keep it large, light, sparing.
+ * Display, the big Fraunces hero headline. Keep it large, light, sparing.
  */
 export function Display({
   className,
@@ -59,7 +59,7 @@ export function Display({
 }
 
 /**
- * SectionTitle — the standard Fraunces section headline.
+ * SectionTitle, the standard Fraunces section headline.
  */
 export function SectionTitle({
   className,
@@ -79,7 +79,7 @@ export function SectionTitle({
 }
 
 /**
- * Lede — the supporting paragraph under a headline.
+ * Lede, the supporting paragraph under a headline.
  */
 export function Lede({ className, ...props }: React.ComponentProps<"p">) {
   return (
@@ -94,7 +94,7 @@ export function Lede({ className, ...props }: React.ComponentProps<"p">) {
 }
 
 /**
- * Label — uppercase micro-label used inside cards.
+ * Label, uppercase micro-label used inside cards.
  */
 export function Label({ className, ...props }: React.ComponentProps<"span">) {
   return (
@@ -109,7 +109,7 @@ export function Label({ className, ...props }: React.ComponentProps<"span">) {
 }
 
 /**
- * Highlight — the green marker. Use on exactly ONE phrase at a time.
+ * Highlight, the green marker. Use on exactly ONE phrase at a time.
  * It is a highlighter, never a fill.
  */
 export function Highlight({

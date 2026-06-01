@@ -6,7 +6,7 @@ export type PropRow = {
 };
 
 /**
- * PropTable — renders a component's props as a reference table.
+ * PropTable, renders a component's props as a reference table.
  * Scrolls horizontally on small screens so the dense columns stay readable.
  */
 export function PropTable({ rows }: { rows: PropRow[] }) {
@@ -40,7 +40,7 @@ export function PropTable({ rows }: { rows: PropRow[] }) {
               </td>
               <td className="px-4 py-3">
                 <code className="font-mono text-[12.5px] text-ink-3">
-                  {r.default ?? "—"}
+                  {r.default ?? "–"}
                 </code>
               </td>
               <td className="px-4 py-3 text-[14px] leading-[1.5] text-ink-2">

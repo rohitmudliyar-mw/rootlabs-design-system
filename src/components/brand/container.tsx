@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 /**
- * Container — centers content and applies the brand gutter.
+ * Container, centers content and applies the brand gutter.
  * size controls the max reading width.
  */
 export function Container({
@@ -26,7 +26,7 @@ export function Container({
 }
 
 /**
- * Section — a vertical block with consistent rhythm.
+ * Section, a vertical block with consistent rhythm.
  * tone sets the background surface.
  */
 export function Section({
