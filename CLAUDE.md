@@ -34,6 +34,7 @@ npx vercel deploy --prod --yes   # deploy to production
 - `/installation`, setup & usage docs
 - `/landing`, sample landing page
 - `/product`, sample product detail page (PDP)
+- `/product-skeleton`, lean PDP skeleton (cart sheet, pack slider, scroll reveals); components in `src/components/pdp/skeleton/`
 
 ## Project structure
 

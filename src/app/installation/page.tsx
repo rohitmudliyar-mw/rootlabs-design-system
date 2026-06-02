@@ -156,6 +156,7 @@ export default function InstallationPage() {
                   ["/", "This design guide"],
                   ["/landing", "Sample landing page"],
                   ["/product", "Sample product page"],
+                  ["/product-skeleton", "Product page skeleton"],
                 ].map(([path, desc]) => (
                   <Card key={path} className="p-4">
                     <code className="text-[13px] font-semibold text-green">

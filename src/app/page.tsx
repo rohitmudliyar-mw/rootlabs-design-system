@@ -568,9 +568,9 @@ export default function DesignGuide() {
               id="examples"
               no="13"
               title="Example layouts"
-              intro="The components composed into two real, mobile-first pages. Shown live below, tap to open the full page."
+              intro="The components composed into real, mobile-first pages. Shown live below, tap to open the full page."
             >
-              <div className="grid justify-items-center gap-12 sm:grid-cols-2">
+              <div className="grid justify-items-center gap-12 sm:grid-cols-2 lg:grid-cols-3">
                 <PhoneFrame
                   src="/landing"
                   title="Landing page"
@@ -580,6 +580,11 @@ export default function DesignGuide() {
                   src="/product"
                   title="Product detail page"
                   href="/product"
+                />
+                <PhoneFrame
+                  src="/product-skeleton"
+                  title="Product skeleton"
+                  href="/product-skeleton"
                 />
               </div>
             </GuideSection>
