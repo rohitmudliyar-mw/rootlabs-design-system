@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="KSM-66 ashwagandha">
+  <defs>
+    <radialGradient id="ashBg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#dcecc6"/>
+      <stop offset="100%" stop-color="#cde3b0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#ashBg)"/>
+  <g fill="#33513f">
+    <path d="M200 100 C158 150 158 240 200 296 C242 240 242 150 200 100 Z" opacity="0.9"/>
+  </g>
+  <path d="M200 120 L200 286" stroke="#dcecc6" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <text x="200" y="345" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="600" letter-spacing="1" fill="#243b2d">KSM-66</text>
+</svg>

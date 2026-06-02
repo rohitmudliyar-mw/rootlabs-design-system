@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Awake in a dark bedroom at night">
+  <defs>
+    <linearGradient id="room" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#15302a"/>
+      <stop offset="60%" stop-color="#0f211d"/>
+      <stop offset="100%" stop-color="#0a1512"/>
+    </linearGradient>
+    <linearGradient id="win" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5b7a82"/>
+      <stop offset="100%" stop-color="#1c343d"/>
+    </linearGradient>
+    <radialGradient id="moon" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#aebfc2" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#aebfc2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig" cx="50%" cy="42%" r="75%">
+      <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.45"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#room)"/>
+
+  <!-- window with cool moonlight -->
+  <g>
+    <rect x="500" y="70" width="230" height="330" rx="6" fill="url(#win)"/>
+    <line x1="615" y1="70" x2="615" y2="400" stroke="#0f211d" stroke-width="6"/>
+    <line x1="500" y1="220" x2="730" y2="220" stroke="#0f211d" stroke-width="6"/>
+    <circle cx="600" cy="160" r="120" fill="url(#moon)"/>
+  </g>
+
+  <!-- soft light spill on the floor/bed -->
+  <polygon points="500,400 730,400 800,560 470,560" fill="#39565e" opacity="0.18"/>
+
+  <!-- bed / headboard hint -->
+  <rect x="0" y="470" width="430" height="130" rx="20" fill="#0b1814" opacity="0.85"/>
+
+  <rect width="800" height="600" fill="url(#vig)"/>
+</svg>

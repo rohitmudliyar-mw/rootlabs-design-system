@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Liposomal absorption diagram">
+  <defs>
+    <radialGradient id="absorbBg" cx="58%" cy="46%" r="70%">
+      <stop offset="0%" stop-color="#f3f7ef"/>
+      <stop offset="100%" stop-color="#e9efe6"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#absorbBg)"/>
+  <g transform="translate(470 250)">
+    <circle r="150" fill="none" stroke="#33513f" stroke-width="1.5" opacity="0.22"/>
+    <circle r="110" fill="none" stroke="#33513f" stroke-width="1.5" opacity="0.34"/>
+    <circle r="72" fill="#ffffff" opacity="0.7"/>
+    <circle r="72" fill="none" stroke="#33513f" stroke-width="2" opacity="0.55"/>
+    <circle r="22" fill="#33513f"/>
+    <text x="0" y="6" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#f1f3ee">Mg</text>
+    <g fill="#7c2d43">
+      <circle cx="110" cy="-30" r="6"/>
+      <circle cx="-118" cy="40" r="6"/>
+      <circle cx="40" cy="128" r="6"/>
+      <circle cx="-60" cy="-120" r="6"/>
+    </g>
+  </g>
+  <text x="64" y="120" font-family="Georgia, serif" font-size="34" fill="#33513f">Lipid shell</text>
+  <text x="64" y="156" font-family="Inter, system-ui, sans-serif" font-size="17" fill="#4e564d">carries magnesium past stomach acid</text>
+</svg>

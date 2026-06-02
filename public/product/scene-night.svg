@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Calm night sky">
+  <defs>
+    <radialGradient id="nightBg" cx="72%" cy="30%" r="90%">
+      <stop offset="0%" stop-color="#33513f"/>
+      <stop offset="60%" stop-color="#243b2d"/>
+      <stop offset="100%" stop-color="#181c19"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#nightBg)"/>
+  <g transform="translate(560 150)">
+    <circle r="70" fill="#f1f3ee"/>
+    <circle r="70" cx="34" cy="-16" fill="#243b2d"/>
+  </g>
+  <g fill="#cde3b0">
+    <circle cx="150" cy="110" r="2.5"/>
+    <circle cx="250" cy="180" r="2"/>
+    <circle cx="110" cy="240" r="2"/>
+    <circle cx="320" cy="90" r="2.5"/>
+    <circle cx="220" cy="300" r="2"/>
+    <circle cx="400" cy="220" r="2"/>
+    <circle cx="90" cy="160" r="1.5"/>
+  </g>
+  <g stroke="#cde3b0" stroke-width="2" stroke-linecap="round" opacity="0.85" fill="none">
+    <path d="M120 400 q40 -26 80 0 t80 0 t80 0 t80 0 t80 0"/>
+    <path d="M120 430 q40 -26 80 0 t80 0 t80 0 t80 0 t80 0" opacity="0.5"/>
+  </g>
+</svg>

@@ -25,23 +25,23 @@ export function SupplementFacts() {
         <Tabs defaultValue="facts" className="mt-8">
           <TabsList
             variant="line"
-            className="h-auto gap-2 border-b border-hair pb-0"
+            className="h-auto w-full justify-start gap-4 overflow-x-auto border-b border-hair pb-0 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
             <TabsTrigger
               value="facts"
-              className="h-auto px-1 pb-3 text-[16px] data-active:text-green"
+              className="h-auto flex-none whitespace-nowrap px-1 pb-3 text-[16px] data-active:text-green"
             >
               Supplement Facts
             </TabsTrigger>
             <TabsTrigger
               value="how"
-              className="h-auto px-1 pb-3 text-[16px] data-active:text-green"
+              className="h-auto flex-none whitespace-nowrap px-1 pb-3 text-[16px] data-active:text-green"
             >
               How to use
             </TabsTrigger>
             <TabsTrigger
               value="why"
-              className="h-auto px-1 pb-3 text-[16px] data-active:text-green"
+              className="h-auto flex-none whitespace-nowrap px-1 pb-3 text-[16px] data-active:text-green"
             >
               Why it works
             </TabsTrigger>

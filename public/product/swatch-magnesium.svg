@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Magnesium glycinate">
+  <defs>
+    <radialGradient id="mgBg" cx="50%" cy="40%" r="68%">
+      <stop offset="0%" stop-color="#f3f7ef"/>
+      <stop offset="100%" stop-color="#e9efe6"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#mgBg)"/>
+  <g fill="none" stroke="#33513f" stroke-width="2" opacity="0.5">
+    <polygon points="200,116 250,145 250,203 200,232 150,203 150,145"/>
+    <polygon points="200,148 224,162 224,190 200,204 176,190 176,162"/>
+  </g>
+  <circle cx="200" cy="176" r="11" fill="#33513f"/>
+  <text x="200" y="305" text-anchor="middle" font-family="Georgia, serif" font-size="66" fill="#33513f">Mg</text>
+</svg>

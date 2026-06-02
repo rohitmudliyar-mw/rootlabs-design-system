@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="Packaging carton">
+  <rect width="800" height="800" fill="#ffffff"/>
+  <g>
+    <polygon points="290,250 510,250 560,300 340,300" fill="#e8ece4"/>
+    <rect x="290" y="300" width="220" height="260" fill="#f1f3ee" stroke="#e1e5db" stroke-width="2"/>
+    <polygon points="510,300 560,300 560,540 510,560" fill="#dfe4d8"/>
+    <polygon points="290,250 340,300 340,560 290,540" fill="#dfe4d8"/>
+    <text x="400" y="420" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#33513f">AshwaMag</text>
+    <line x1="330" y1="445" x2="470" y2="445" stroke="#33513f" stroke-width="2"/>
+    <text x="400" y="475" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" letter-spacing="1" fill="#5f665c">SLEEP GUMMIES</text>
+  </g>
+  <text x="400" y="660" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="15" letter-spacing="1.5" fill="#5f665c">RECYCLABLE CARTON</text>
+</svg>
